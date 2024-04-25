@@ -1,3 +1,4 @@
+import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 
@@ -6,8 +7,8 @@ const ErrorPage = () => {
         <div className="max-w-7xl mx-auto flex justify-center items-center mt-10 rounded-xl gap-10">
             <div>
                 <Link to="/">
-                    <button className="btn btn-outline btn-accent flex"> 
-                        <img className="w-10 rounded-full" src="https://i.ibb.co/qjrHDSr/arrow2.jpg" alt="" />
+                    <button className="btn bg-black hover:bg-emerald-600 hover:text-black text-white flex"> 
+                        <IoIosArrowBack/>
                         Back to Home
                     </button>
                 </Link>
