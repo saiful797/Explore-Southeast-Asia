@@ -4,8 +4,25 @@ const AddTourismSpotPage = () => {
 
     const{register, handleSubmit} = useForm();
 
-    const onSubmit = (data) => {
-        console.log(data)
+    const onSubmit = (newTouristSpot) => {
+
+        fetch('http://localhost:5000/touristSpot', {
+            method: 'POST',
+            headers: {
+                'content-type' : 'application/json',
+            },
+            body: JSON.stringify(newTouristSpot)
+        })
+        .then(res => res.json())
+        .then(data =>{
+             console.log(data);
+
+             if(data.insertedId){
+                
+             }
+            
+        })
+        console.log(newTouristSpot);
         
     }
    
