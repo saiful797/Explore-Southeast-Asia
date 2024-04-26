@@ -49,7 +49,7 @@ const SignUpPage = () => {
                         </div>
                         <div className="flex justify-center gap-5">
                             <h1>Have an account?</h1>
-                            <Link to="/login"><p className="text-orange-400 font-bold hover:text-black link link-hover"> Sign In </p></Link>
+                            <Link to="/login"><p className="text-sky-400 font-bold hover:text-black link link-hover"> Sign In </p></Link>
                         </div>
                     </form>
                 </div>

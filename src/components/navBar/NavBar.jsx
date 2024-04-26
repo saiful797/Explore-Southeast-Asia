@@ -1,9 +1,10 @@
+import { FiAlignJustify } from "react-icons/fi";
 import { Link, NavLink } from "react-router-dom";
 
 
 const NavBar = () => {
     const navLinks=<>
-        <li className="md:hover:text-red-600 md:text-teal-500"><NavLink to="/">Home </NavLink></li>
+        <li className="md:hover:text-red-600"><NavLink to="/">Home </NavLink></li>
         <li className="md:hover:text-red-600"><NavLink to="/about">About</NavLink></li>
         <li className="md:hover:text-red-600"><NavLink to="/contact">Contact Us</NavLink></li>  
         <div>
@@ -18,16 +19,21 @@ const NavBar = () => {
     <div className="navbar bg-black p-3 mt-3">
         <div className="navbar-start">
             <div className="dropdown">
-                <div tabIndex={0} role="button" className="btn btn-sm bg-slate-50 lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                <div tabIndex={0} role="button" className="btn btn-outline btn-sm btn-info lg:hidden">
+                    
+                    <FiAlignJustify className="w-5 h-5"/>
+
                 </div>
                 <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                     {navLinks}
                 </ul>
             </div>
             <div className="ml-3 lg:ml-0 text-white">
-                <Link to='/' className="text-2xl md:text-4xl lg:text-4xl font-bold flex">
-                    Explore Southeast Asia
+                <Link to='/' className="text-2xl lg:text-4xl font-bold flex">
+                    <div className="relative">
+                        <h1>Explore<span className="text-amber-600">Southeast</span>Asia</h1> 
+                        <p className="text-xs absolute right-0 text-sky-200">Best Tourism</p>
+                    </div>
                 </Link>
             </div>
         </div>
