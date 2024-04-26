@@ -5,6 +5,7 @@ import HomePage from "../pages/HomePage";
 import SignInPage from "../pages/SignInPage";
 import SignUpPage from "../pages/SignUpPage";
 import AddTourismSpotPage from "../pages/AddTourismSpotPage";
+import UpdateTouristSpotPage from "../pages/UpdateTouristSpotPage";
 
 
 const router = createBrowserRouter([
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
             {
                 path: '/add/tourism/spot',
                 element: <AddTourismSpotPage />
+            },
+            {
+                path:'/update/tourism/Spot',
+                element: <UpdateTouristSpotPage />
             }
         ]
     }
