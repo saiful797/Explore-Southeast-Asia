@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        DancingScript:['Dancing Script','cursive'],
+        Tangerine:['Tangerine','cursive'],
+      }
+    },
   },
   plugins: [require("daisyui")],
 }

@@ -5,7 +5,11 @@ import { Link, NavLink } from "react-router-dom";
 const NavBar = () => {
     const navLinks=<>
         <li className="md:hover:text-red-600"><NavLink to="/">Home </NavLink></li>
-        <li className="md:hover:text-red-600"><NavLink to="/about">About</NavLink></li>
+        <li className="md:hover:text-red-600"><NavLink to="/tourism/spot">All Tourism Spot</NavLink></li>
+        <li className="md:hover:text-red-600"><NavLink to="/add/tourism/spot">Add Tourists Spot </NavLink></li>
+        <li className="md:hover:text-red-600"><NavLink to="/update/tourism/Spot">Update Tourists Spot </NavLink></li>
+        <li className="md:hover:text-red-600"><NavLink to="/myList">My List</NavLink></li>
+        <li className="md:hover:text-red-600"><NavLink to="/about">About Us</NavLink></li>
         <li className="md:hover:text-red-600"><NavLink to="/contact">Contact Us</NavLink></li>  
         <div>
             <li className="md:hidden"><NavLink to="/login">Sign in</NavLink></li>
@@ -29,16 +33,16 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="ml-3 lg:ml-0 text-white">
-                <Link to='/' className="text-2xl lg:text-4xl font-bold flex">
+                <Link to='/' className="text-4xl font-bold flex">
                     <div className="relative">
-                        <h1>Explore<span className="text-amber-600">Southeast</span>Asia</h1> 
-                        <p className="text-xs absolute right-0 text-sky-200">Best Tourism</p>
+                        <h1 className="font-Tangerine">Explore<span className="text-amber-600">Southeast</span>Asia</h1> 
+                        <p className="text-xs font-extrabold absolute top-7 right-0 text-white">Best Tourism</p>
                     </div>
                 </Link>
             </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 gap-1 text-lg font-bold text-white">
+            <ul className="menu menu-horizontal px-1 gap-1 text-white">
                     {navLinks}
             </ul>
         </div>
