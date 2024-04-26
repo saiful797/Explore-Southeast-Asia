@@ -1,7 +1,7 @@
 
 const UpdateTouristSpotPage = () => {
     return (
-        <div className="p-5 md:p-16">
+        <div className="p-5 md:p-16 shadow-2xl">
             <h1 className="text-2xl md:text-5xl font-extrabold mb-5 text-center">Update a Tourist Spot</h1>
             
 

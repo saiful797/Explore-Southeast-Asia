@@ -5,8 +5,8 @@ import { Link, NavLink } from "react-router-dom";
 const NavBar = () => {
     const navLinks=<>
         <li className="md:hover:text-red-600 font-extrabold"><NavLink to="/">Home </NavLink></li>
-        <li className="md:hover:text-red-600 font-medium"><NavLink to="/tourism/spot">All Tourism Spot</NavLink></li>
-        <li className="md:hover:text-red-600 font-medium"><NavLink to="/add/tourism/spot">Add Tourists Spot </NavLink></li>
+        <li className="md:hover:text-red-600 font-medium"><NavLink to="/all/tourists/spot">All Tourists Spot</NavLink></li>
+        <li className="md:hover:text-red-600 font-medium"><NavLink to="/add/tourists/spot">Add Tourists Spot </NavLink></li>
         <li className="md:hover:text-red-600 font-medium"><NavLink to="/update/tourism/Spot">Update Tourists Spot </NavLink></li>
         <li className="md:hover:text-red-600 font-medium"><NavLink to="/myList">My List</NavLink></li>
         <li className="md:hover:text-red-600 font-medium"><NavLink to="/about">About Us</NavLink></li>

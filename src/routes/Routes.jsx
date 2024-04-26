@@ -6,6 +6,7 @@ import SignInPage from "../pages/SignInPage";
 import SignUpPage from "../pages/SignUpPage";
 import AddTourismSpotPage from "../pages/AddTourismSpotPage";
 import UpdateTouristSpotPage from "../pages/UpdateTouristSpotPage";
+import AllTouristsSpotPage from "../pages/AllTouristsSpotPage";
 
 
 const router = createBrowserRouter([
@@ -17,7 +18,6 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <HomePage />,
-                loader: () => fetch('http://localhost:5000/touristSpot')
             },
             {
                 path:'/login',
@@ -28,12 +28,17 @@ const router = createBrowserRouter([
                 element: <SignUpPage />
             },
             {
-                path: '/add/tourism/spot',
+                path: '/add/tourists/spot',
                 element: <AddTourismSpotPage />
             },
             {
                 path:'/update/tourism/Spot',
                 element: <UpdateTouristSpotPage />
+            },
+            {
+                path:'/all/tourists/spot',
+                element: <AllTouristsSpotPage />,
+                loader: () => fetch('http://localhost:5000/touristSpot')
             }
         ]
     }
