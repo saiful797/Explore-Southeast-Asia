@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 
 const AddTourismSpotPage = () => {
 
-    const{register, handleSubmit} = useForm();
+    const{register,reset , handleSubmit} = useForm();
 
     const onSubmit = (newTouristSpot) => {
 
@@ -25,6 +25,8 @@ const AddTourismSpotPage = () => {
                     icon: 'success',
                     confirmButtonText: 'OK',
                 })
+                
+                reset();
             }
             
         })
