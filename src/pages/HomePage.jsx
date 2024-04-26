@@ -1,9 +1,12 @@
+import SliderSwiper from "../components/sliderSwiper/SliderSwiper";
 
 const HomePage = () => {
 
     return (
-        <div>
-            <h1 className="text-6xl font-extrabold text-center">This is Home Page.</h1>
+        <div className="mt-10">
+            <div className="z-[-1]">
+                <SliderSwiper />
+            </div>
         </div>
     );
 };

@@ -9,8 +9,7 @@ const NavBar = () => {
         <li className="md:hover:text-red-600 font-medium"><NavLink to="/add/tourists/spot">Add Tourists Spot </NavLink></li>
         <li className="md:hover:text-red-600 font-medium"><NavLink to="/update/tourism/Spot">Update Tourists Spot </NavLink></li>
         <li className="md:hover:text-red-600 font-medium"><NavLink to="/myList">My List</NavLink></li>
-        <li className="md:hover:text-red-600 font-medium"><NavLink to="/about">About Us</NavLink></li>
-        <li className="md:hover:text-red-600 font-medium"><NavLink to="/contact">Contact Us</NavLink></li>  
+        <li className="md:hover:text-red-600 font-medium"><NavLink to="/about">About Us</NavLink></li>  
         <div>
             <li className="md:hidden"><NavLink to="/login">Sign in</NavLink></li>
             <li className="md:hidden"><NavLink to="/register">Sign up</NavLink></li>
@@ -28,7 +27,7 @@ const NavBar = () => {
                     <FiAlignJustify className="w-5 h-5"/>
 
                 </div>
-                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52">
                     {navLinks}
                 </ul>
             </div>
@@ -42,7 +41,7 @@ const NavBar = () => {
             </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 gap-1 text-white">
+            <ul className="menu menu-horizontal px-1 text-white">
                     {navLinks}
             </ul>
         </div>
