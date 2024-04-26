@@ -6,12 +6,12 @@ import { Link } from "react-router-dom";
 const SignInPage = () => {
     const [showPassword, setShowPassword] = useState(false)
     return (
-        <div className="min-h-screen bg-base-200 mt-10 md:mt-5 rounded-2xl">
+        <div className="min-h-screen bg-base-200 mt-10 md:mt-5">
             <div className="hero-content flex-col">
-                <div className="text-center">
+                <div className="text-center md:mb-2">
                     <h1 className="text-5xl font-bold">Sign In now!</h1>
                 </div>
-                <div className="card w-full max-w-sm shadow-green-500 shadow-sm bg-base-100 mt-10 md:mt-0">
+                <div className="card w-full max-w-sm shadow-green-500 shadow-sm bg-base-100 mt-5 md:mt-0">
                     <form className="card-body">
                         <div className="form-control">
                             <label className="label">
