@@ -1,4 +1,5 @@
 import { useForm} from "react-hook-form"
+import Swal from "sweetalert2";
 
 const AddTourismSpotPage = () => {
 
@@ -15,15 +16,19 @@ const AddTourismSpotPage = () => {
         })
         .then(res => res.json())
         .then(data =>{
-             console.log(data);
+            console.log(data);
 
-             if(data.insertedId){
-                
-             }
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Tourist Spot Added Successfully!',
+                    icon: 'success',
+                    confirmButtonText: 'OK',
+                })
+            }
             
         })
         console.log(newTouristSpot);
-        
     }
    
     return (
