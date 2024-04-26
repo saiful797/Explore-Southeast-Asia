@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -6,6 +7,14 @@ import { Link } from "react-router-dom";
 const SignUpPage = () => {
     
     const [showPassword, setShowPassword]=useState(false);
+
+    const {register ,reset , handleSubmit} = useForm();
+
+    const onSubmit = (data) =>{
+        console.log(data);
+        
+        reset();
+    }
   
     return (
         <div className="min-h-screen bg-base-200 mt-5 rounded-2xl">
@@ -14,30 +23,30 @@ const SignUpPage = () => {
                     <h1 className="text-5xl font-bold">Create an Account</h1>
                 </div>
                 <div className="card w-full max-w-sm shadow-green-500 shadow-sm bg-base-100">
-                    <form className="card-body">
+                    <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
-                            <input type="text" placeholder="Enter your name..." name="fullName" className="input input-bordered" required />
+                            <input type="text" placeholder="Enter your name..." name="name" className="input input-bordered" {...register("name")} required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" placeholder="Enter your email..." name="email" className="input input-bordered" required />
+                            <input type="email" placeholder="Enter your email..." name="email" className="input input-bordered" {...register("email")} required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Photo URL</span>
                             </label>
-                            <input type="url" placeholder="Enter your photo url..." name="imageURL" className="input input-bordered"/>
+                            <input type="url" placeholder="Enter your photo url..." name="imageURL" {...register("imageURL")} className="input input-bordered"/>
                         </div>
                         <div className="form-control relative">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type={showPassword? "text":"password"} placeholder="Password..." name="password" className="input input-bordered" required />
+                            <input type={showPassword? "text":"password"} placeholder="Password..." name="password" className="input input-bordered" {...register("password")} required />
                             <span className="top-[54px] right-5  absolute" onClick={()=>setShowPassword(!showPassword)}>
                                 {
                                     showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>

@@ -1,10 +1,19 @@
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 
 const SignInPage = () => {
-    const [showPassword, setShowPassword] = useState(false)
+    const [showPassword, setShowPassword] = useState(false);
+    const {register ,reset , handleSubmit} = useForm();
+
+    const onSubmit = (data) => {
+        console.log(data);
+
+        reset();
+    }
+
     return (
         <div className="min-h-screen bg-base-200 mt-10 md:mt-5">
             <div className="hero-content flex-col">
@@ -12,18 +21,18 @@ const SignInPage = () => {
                     <h1 className="text-5xl font-bold">Sign In now!</h1>
                 </div>
                 <div className="card w-full max-w-sm shadow-green-500 shadow-sm bg-base-100 mt-5 md:mt-0">
-                    <form className="card-body">
+                    <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" placeholder="Enter your email..." name="email" className="input input-bordered" required />
+                            <input type="email" placeholder="Enter your email..." name="email" className="input input-bordered" {...register("email")} required />
                         </div>
                         <div className="form-control relative">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type={showPassword? "text":"password"} placeholder="Password..." name="password" className="input input-bordered" required />
+                            <input type={showPassword? "text":"password"} placeholder="Password..." name="password" className="input input-bordered" {...register("password")} required />
 
                             <span className="top-[54px] right-5  absolute" onClick={()=>setShowPassword(!showPassword)}>
                                 {
