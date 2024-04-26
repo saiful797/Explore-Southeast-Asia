@@ -17,10 +17,10 @@ const SignUpPage = () => {
     }
   
     return (
-        <div className="min-h-screen bg-base-200 mt-5 rounded-2xl">
+        <div className="min-h-screen bg-[url('https://i.postimg.cc/Gh3XYhh6/tourism3.jpg')] bg-no-repeat bg-cover">
             <div className="hero-content flex-col">
                 <div className="text-center mb-2">
-                    <h1 className="text-5xl font-bold">Create an Account</h1>
+                    <h1 className="text-5xl mt-5 font-bold text-white">Create an Account</h1>
                 </div>
                 <div className="card w-full max-w-sm shadow-green-500 shadow-sm bg-base-100">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">

@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage:{
+        'tourism1': "url('https://i.postimg.cc/ydkVkz3R/tourism-1.jpg')"
+      },
+
       fontFamily:{
         DancingScript:['Dancing Script','cursive'],
         Tangerine:['Tangerine','cursive'],

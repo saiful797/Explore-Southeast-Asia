@@ -15,10 +15,10 @@ const SignInPage = () => {
     }
 
     return (
-        <div className="min-h-screen bg-base-200 mt-10 md:mt-5">
+        <div className="min-h-screen bg-[url('https://i.postimg.cc/Gh3XYhh6/tourism3.jpg')] bg-no-repeat bg-cover">
             <div className="hero-content flex-col">
                 <div className="text-center md:mb-2">
-                    <h1 className="text-5xl font-bold">Sign In now!</h1>
+                    <h1 className="text-5xl mt-10 font-bold text-white">Sign In now!</h1>
                 </div>
                 <div className="card w-full max-w-sm shadow-green-500 shadow-sm bg-base-100 mt-5 md:mt-0">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">

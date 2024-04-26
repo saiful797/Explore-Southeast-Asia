@@ -34,6 +34,7 @@ const AddTourismSpotPage = () => {
    
     return (
         <div className="p-5 md:p-16">
+
             <h1 className="text-2xl md:text-5xl font-extrabold mb-5 text-center">Add a Tourist Spot</h1>
             
             <form onSubmit={handleSubmit(onSubmit)}>
