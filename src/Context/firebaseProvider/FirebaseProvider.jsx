@@ -64,6 +64,6 @@ const FirebaseProvider = ({children}) => {
 };
 
 FirebaseProvider.propTypes = {
-    children: PropTypes.node
+    children: PropTypes.node,
 }
 export default FirebaseProvider;
