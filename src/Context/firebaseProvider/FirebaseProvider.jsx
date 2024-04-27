@@ -26,7 +26,7 @@ const FirebaseProvider = ({children}) => {
         })
     }
 
-    // Logout
+    // Logout Process
     const logout =()=>{
         setUser(null);
         {
@@ -36,7 +36,7 @@ const FirebaseProvider = ({children}) => {
         return signOut(auth);
     }
 
-    // Observer
+    // Observer 
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
