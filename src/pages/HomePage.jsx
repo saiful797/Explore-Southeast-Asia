@@ -1,20 +1,13 @@
+import { useLoaderData } from "react-router-dom";
 import CountriesCard from "../components/CountriesCard/CountriesCard";
 import FAQ from "../components/FAQ/FAQ";
 import SliderSwiper from "../components/sliderSwiper/SliderSwiper";
-import TouristsSpotCard from "../components/spots/TouristsSpotCard";
 import { useEffect, useState } from "react";
+import AllTouristSpotCard from "../components/AllTouristSpotCard/AllTouristSpotCard";
 
 const HomePage = () => {
-    const [spots, setSpot] = useState([]);
     const [countries, setCountries] = useState([]);
-
-    useEffect(() => {
-        fetch('touristsSport.json')
-         .then(res => res.json())
-         .then(data =>{
-            setSpot(data);
-         })
-    })
+    const allTouristsSpot = useLoaderData();
 
     useEffect(() => {
         fetch("countries.json")
@@ -35,7 +28,7 @@ const HomePage = () => {
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 place-items-center gap-5">
                     {
-                        spots.map(spot => <TouristsSpotCard key={spot.id} spot={spot} />)
+                        allTouristsSpot.map(touristSpot => <AllTouristSpotCard key={touristSpot._id} touristSpot={touristSpot} />)
                     }
                 </div>
             </div>
