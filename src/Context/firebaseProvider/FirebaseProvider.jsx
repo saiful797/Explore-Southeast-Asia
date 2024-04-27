@@ -18,7 +18,7 @@ const FirebaseProvider = ({children}) => {
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
-    // Update user profile
+    // Update user profile with name and imageURL
     const updateUserProfile =(name, imageURL) =>{
         return updateProfile(auth.currentUser,{
             displayName: name,
