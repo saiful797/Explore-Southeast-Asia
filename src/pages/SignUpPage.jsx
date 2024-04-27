@@ -1,18 +1,32 @@
-import { useState } from "react";
+import {  useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Context/firebaseProvider/FirebaseProvider";
+import Swal from "sweetalert2";
 
 
 const SignUpPage = () => {
-    
-    const [showPassword, setShowPassword]=useState(false);
 
+    const {createUser} =  useContext(AuthContext);
+
+    const [showPassword, setShowPassword]=useState(false);
     const {register ,reset , handleSubmit} = useForm();
 
     const onSubmit = (data) =>{
-        console.log(data);
-        
+        // console.log(data);
+        const { email, password, } = data;
+
+        console.log(email, password);
+
+        createUser(email, password).then(() => {
+            Swal.fire({
+                title: 'Success!',
+                text: 'Account Create Successfully!',
+                icon: 'success',
+                confirmButtonText: 'OK',
+            })
+        })
         reset();
     }
   
