@@ -4,6 +4,7 @@ import FAQ from "../components/FAQ/FAQ";
 import SliderSwiper from "../components/sliderSwiper/SliderSwiper";
 import { useEffect, useState } from "react";
 import AllTouristSpotCard from "../components/AllTouristSpotCard/AllTouristSpotCard";
+import ReviewSlider from "../components/reviewSlider/ReviewSlider";
 
 const HomePage = () => {
     const [countries, setCountries] = useState([]);
@@ -41,6 +42,12 @@ const HomePage = () => {
                     {
                         countries.map(country => <CountriesCard key={country.id} country={country} />)
                     }
+                </div>
+                <div className="mt-20">
+                    <div className="bg-black p-3 mb-10 shadow-transparent">
+                        <h1 className="text-4xl font-extrabold text-center text-white">Customer's Reviews</h1>
+                    </div>
+                    <ReviewSlider />
                 </div>
 
                 <div className="mt-10 text-center">
