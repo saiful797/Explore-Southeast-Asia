@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
-import { createUserWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
 import { Link } from "react-router-dom";
 
@@ -24,6 +24,12 @@ const FirebaseProvider = ({children}) => {
             displayName: name,
             photoURL: imageURL,
         })
+    }
+
+    // Login Process
+    // User sign in (Log in with email and password)
+    const singInUser = (email, password) =>{
+        return signInWithEmailAndPassword(auth, email, password)
     }
 
     // Logout Process
@@ -50,6 +56,7 @@ const FirebaseProvider = ({children}) => {
     const allValues ={
         createUser,
         updateUserProfile,
+        singInUser,
         logout,
         user,
     }

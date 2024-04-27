@@ -1,17 +1,46 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../Context/firebaseProvider/FirebaseProvider";
+import Swal from "sweetalert2";
 
 
 const SignInPage = () => {
+    const {singInUser} = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
     const {register ,reset , handleSubmit} = useForm();
 
-    const onSubmit = (data) => {
-        console.log(data);
+    // Navigation Process
+    const navigate = useNavigate(null);
 
-        reset();
+    const onSubmit = (data) => {
+        const {email, password} = data;
+        // console.log(data);
+        singInUser(email, password).then(result => {
+            if(result.user){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'You Login Successfully!',
+                    icon: 'success',
+                    confirmButtonText: 'OK',
+                })
+            }
+
+            navigate(location?.state || '/');
+            
+            reset();
+        })
+        .catch(error =>{
+            if(error.message){
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Invalid Credential!',
+                    icon: 'error',
+                    confirmButtonText: 'OK',
+                })
+            }
+        })
     }
 
     return (
