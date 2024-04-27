@@ -31,13 +31,13 @@ const SignInWithSocialMedia = () => {
     return (
         <div className="gap-5">
 
-            <div className="pl-5 pr-5">
+            <div className="pl-7 pr-7">
                 <button className="btn btn-outline btn-success w-full text-lg font-bold" onClick= {() => handleSocialMediaLogin(googleLogin)}>
-                    <FcGoogle />
+                    <FcGoogle className="text-2xl" />
                     <h1>Sign In with Google</h1>
                 </button>
             </div>
-            <div className="pl-5 pr-5 mt-2">
+            <div className="pl-7 pr-7 mt-2">
                 <button className="btn btn-outline w-full text-lg font-bold" onClick= {() => handleSocialMediaLogin(githubLogin)}>
                     <FaGithub className="text-2xl"/>
                     <h1>Sign In with Github</h1>
