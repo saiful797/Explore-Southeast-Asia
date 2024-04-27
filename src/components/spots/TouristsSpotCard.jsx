@@ -4,7 +4,7 @@ const TouristsSpotCard = ({spot}) => {
     const {image_url, tourist_spot} = spot;
 
     return (
-        <div className="card-compact w-80 bg-black shadow-xl">
+        <div className="card-compact w-80 bg-black shadow-inner shadow-emerald-500">
             <figure><img className='h-60' src={image_url} alt="spot" /></figure>
             <div className="card-body">
                 <h2 className="card-title text-white">{tourist_spot}</h2>
