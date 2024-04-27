@@ -26,8 +26,8 @@ const SliderSwiper = () => {
                 <div className='grid grid-cols-2'>
                     <div className='flex flex-col justify-center items-center md:space-y-4'>
                         <h1 className='text-cyan-300 font-Tangerine text-4xl font-bold'>Sajek</h1> 
-                        <h4 className='text-orange-400 font-Tangerine text-3xl'>is a popular tourist destination</h4>
-                        <p className='text-balance text-center'>It's located in the Rangamati Hill District, part of the Chittagong Hill Tracts.</p>
+                        <h4 className='text-orange-400 font-Tangerine text-3xl'>a popular tourist spot.</h4>
+                        <p className='text-balance text-center'>It's located in the Rangamati Hill District.</p>
                         <p className='text-3xl font-bold text-green-600'>Bangladesh</p>
                     </div>
                     <div className=' h-full '>
@@ -52,7 +52,7 @@ const SliderSwiper = () => {
                 <div className='grid grid-cols-2'>
                     <div className='flex flex-col justify-center items-center md:space-y-4'>
                         <h1 className='text-cyan-300 font-Tangerine text-4xl font-bold'>Chiang Mai</h1> 
-                        <h4 className='text-orange-400 font-Tangerine text-3xl text-center'> an Thailand paradise.</h4>
+                        <h4 className='text-orange-400 font-Tangerine text-3xl text-center'> a Thailand paradise.</h4>
                         <p className='text-balance text-center'>Where Culture Blossoms Amidst Nature's Splendor.</p>
                         <p className='text-3xl font-bold text-blue-950 text-center'>Thailand</p>
                     </div>

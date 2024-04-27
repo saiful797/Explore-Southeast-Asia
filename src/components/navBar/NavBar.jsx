@@ -22,7 +22,7 @@ const NavBar = () => {
     <div className="navbar bg-black p-3 mt-3">
         <div className="navbar-start">
             <div className="dropdown">
-                <div tabIndex={0} role="button" className="btn btn-outline btn-sm btn-info lg:hidden">
+                <div tabIndex={0} role="button" className="btn btn-outline btn-sm text-white lg:hidden">
                     
                     <FiAlignJustify className="w-5 h-5"/>
 

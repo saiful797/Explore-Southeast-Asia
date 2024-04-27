@@ -2,8 +2,6 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
 
 const AllTouristSpotCard = ({touristSpot}) => {
-    console.log(touristSpot);
-
     const {photo, cost, seasonality, spot, time} = touristSpot;
 
     return (
