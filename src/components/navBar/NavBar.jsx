@@ -1,8 +1,14 @@
+import { useContext } from "react";
 import { FiAlignJustify } from "react-icons/fi";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Context/firebaseProvider/FirebaseProvider";
 
 
 const NavBar = () => {
+    const {user} = useContext(AuthContext);
+
+    // console.log(user);
+
     const navLinks=<>
         <li className="md:hover:text-red-600 font-extrabold"><NavLink to="/">Home </NavLink></li>
         <li className="md:hover:text-red-600 font-medium"><NavLink to="/all/tourists/spot">All Tourists Spot</NavLink></li>
@@ -10,10 +16,14 @@ const NavBar = () => {
         <li className="md:hover:text-red-600 font-medium"><NavLink to="/update/tourism/Spot">Update Tourists Spot </NavLink></li>
         <li className="md:hover:text-red-600 font-medium"><NavLink to="/myList">My List</NavLink></li>
         <li className="md:hover:text-red-600 font-medium"><NavLink to="/about">About Us</NavLink></li>  
-        <div>
-            <li className="md:hidden"><NavLink to="/login">Sign in</NavLink></li>
-            <li className="md:hidden"><NavLink to="/register">Sign up</NavLink></li>
-        </div>
+        {
+            user? <div>
+                <li className="md:hidden"><NavLink to="/login">Sign in</NavLink></li>
+                <li className="md:hidden"><NavLink to="/register">Sign up</NavLink></li>
+            </div> 
+            : 
+            ''
+        }
     </>
 
 
@@ -48,24 +58,24 @@ const NavBar = () => {
         
         <div className="navbar-end">
             {
-                // user?<div className="flex justify-center items-center gap-2">
+                user?<div className="flex justify-center items-center gap-2">
 
-                //     <div className="w-10 tooltip">
-                        
-                //             {/* user?.photoURL? <img className="rounded-full" src={user.photoURL}/>
-                //             : */}
-                //             <img className="rounded-full" src="https://i.ibb.co/Jq10C13/user.png" alt="User profile..."/>
-                        
-                //     </div>
+                    <div className="w-10 tooltip">
+                        {
+                            user?.photoURL? <img className="rounded-full" data-tip={user.displayName} src={user.photoURL}/>
+                            :
+                            <img className="rounded-full" src="https://i.ibb.co/Jq10C13/user.png" alt="User profile..."/>
+                        }
+                    </div>
 
-                //     <div>
-                //         <Link to="/">
-                //             <button className="btn btn-sm btn-outline btn-success">Logout</button>
-                //         </Link>
-                //     </div>
+                    <div>
+                        <Link to="/">
+                            <button className="btn btn-sm btn-outline btn-success">Logout</button>
+                        </Link>
+                    </div>
 
-                // </div>
-                // :
+                </div>
+                :
                 <div className="space-x-3 hidden md:flex">
                     <Link className="btn btn-sm btn-outline text-white" to="/login">Sign in</Link>
                     <Link className="btn btn-sm btn-outline text-white" to="/register">Sign up</Link>
