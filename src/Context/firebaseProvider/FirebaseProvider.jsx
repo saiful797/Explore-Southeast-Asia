@@ -1,7 +1,8 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
-import { createUserWithEmailAndPassword, onAuthStateChanged, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
+import { Link } from "react-router-dom";
 
 
 // Context
@@ -25,6 +26,16 @@ const FirebaseProvider = ({children}) => {
         })
     }
 
+    // Logout
+    const logout =()=>{
+        setUser(null);
+        {
+            <Link to='/'></Link>
+            location.reload();
+        }
+        return signOut(auth);
+    }
+
     // Observer
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -39,6 +50,7 @@ const FirebaseProvider = ({children}) => {
     const allValues ={
         createUser,
         updateUserProfile,
+        logout,
         user,
     }
 

@@ -63,7 +63,7 @@ const SignUpPage = () => {
             })
 
             updateUserProfile(name, imageURL).then(() => {
-                navigate(location?.state); //|| '/'
+                navigate(location?.state || '/');
             })
         })
         reset();

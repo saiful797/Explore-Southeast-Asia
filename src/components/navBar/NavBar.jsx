@@ -2,10 +2,11 @@ import { useContext } from "react";
 import { FiAlignJustify } from "react-icons/fi";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Context/firebaseProvider/FirebaseProvider";
+import Swal from "sweetalert2";
 
 
 const NavBar = () => {
-    const {user} = useContext(AuthContext);
+    const {user, logout} = useContext(AuthContext);
 
     // console.log(user);
 
@@ -26,6 +27,16 @@ const NavBar = () => {
         }
     </>
 
+    const myFunction = () =>{
+
+        Swal.fire({
+            title: 'Success!',
+            text: 'Logout Successful!',
+            icon: 'success',
+            confirmButtonText: 'OK',
+        })
+        logout();
+    }
 
 
     return (
@@ -70,7 +81,7 @@ const NavBar = () => {
 
                     <div>
                         <Link to="/">
-                            <button className="btn btn-sm btn-outline btn-success">Logout</button>
+                            <button onClick={myFunction} className="btn btn-sm btn-outline btn-success">Logout</button>
                         </Link>
                     </div>
 
