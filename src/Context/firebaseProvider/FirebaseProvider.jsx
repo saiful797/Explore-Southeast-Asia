@@ -1,12 +1,16 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
 import { Link } from "react-router-dom";
-
+import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 
 // Context
 export const AuthContext = createContext(null);
+
+// Social auth provider
+const googleProvider = new GoogleAuthProvider();
+const githubProvider = new GithubAuthProvider(); 
 
 
 const FirebaseProvider = ({children}) => {
@@ -30,6 +34,15 @@ const FirebaseProvider = ({children}) => {
     // User sign in (Log in with email and password)
     const singInUser = (email, password) =>{
         return signInWithEmailAndPassword(auth, email, password)
+    }
+
+    // Google pop up log in
+    const googleLogin = () =>{
+        return signInWithPopup(auth, googleProvider);
+    }
+    // Github pop up log in
+    const githubLogin = () =>{
+        return signInWithPopup(auth, githubProvider);
     }
 
     // Logout Process
@@ -57,6 +70,8 @@ const FirebaseProvider = ({children}) => {
         createUser,
         updateUserProfile,
         singInUser,
+        googleLogin,
+        githubLogin,
         logout,
         user,
     }

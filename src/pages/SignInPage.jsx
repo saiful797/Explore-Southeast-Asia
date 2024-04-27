@@ -4,6 +4,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/firebaseProvider/FirebaseProvider";
 import Swal from "sweetalert2";
+import SignInWithSocialMedia from "../components/SignInWithSocialMedia/SignInWithSocialMedia";
 
 
 const SignInPage = () => {
@@ -83,6 +84,9 @@ const SignInPage = () => {
                     </form>
                     <div className="rounded-b-2xl bg-slate-100 pt-2 pb-5">
                         <div className="text-2xl font-bold text-center">OR</div>
+                        <div>
+                            <SignInWithSocialMedia/>
+                        </div>
                     </div>
                 </div>
             </div>
