@@ -4,7 +4,9 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
 const SignInWithSocialMedia = () => {
-    const {googleLogin} = useContext(AuthContext);
+
+    const {googleLogin, githubLogin} = useContext(AuthContext);
+
     const navigate = useNavigate();
 
     const handleSocialMediaLogin = (socialMediaProvider) =>{
@@ -25,10 +27,13 @@ const SignInWithSocialMedia = () => {
     }
 
     return (
-        <div>
+        <div className="gap-5">
 
             <div>
                 <button className="btn btn-secondary" onClick= {() => handleSocialMediaLogin(googleLogin)}>Google Sign In</button>
+            </div>
+            <div>
+                <button className="btn btn-secondary" onClick= {() => handleSocialMediaLogin(githubLogin)}>Github Sign In</button>
             </div>
             
         </div>
