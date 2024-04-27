@@ -48,7 +48,7 @@ const SignInPage = () => {
         <div className="min-h-screen bg-[url('https://i.postimg.cc/Gh3XYhh6/tourism3.jpg')] bg-no-repeat bg-cover">
             <div className="hero-content flex-col">
                 <div className="text-center md:mb-2">
-                    <h1 className="text-5xl mt-10 font-bold text-white">Sign In now!</h1>
+                    <h1 className="text-5xl mt-5 font-bold text-white">Sign In now!</h1>
                 </div>
                 <div className="card w-full max-w-sm shadow-green-500 shadow-sm bg-base-100 mt-5 md:mt-0">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">
@@ -82,9 +82,9 @@ const SignInPage = () => {
                             <Link to="/register"><p className="text-sky-400 font-bold hover:text-black link link-hover">Sign Up</p></Link>
                         </div>
                     </form>
-                    <div className="rounded-b-2xl bg-slate-100 pt-2 pb-5">
-                        <div className="text-2xl font-bold text-center">OR</div>
-                        <div>
+                    <div className="pb-5 -mt-5">
+                        <div className="text-2xl font-bold text-center text-orange-500 font-DancingScript">OR</div>
+                        <div className="mt-2">
                             <SignInWithSocialMedia/>
                         </div>
                     </div>
