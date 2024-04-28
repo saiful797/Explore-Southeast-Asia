@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { AuthContext } from "../Context/firebaseProvider/FirebaseProvider";
 import UpdateTouristSpotPage from "./UpdateTouristSpotPage";
+import Swal from "sweetalert2";
 
 const ViewSpotDetailsPage = () => {
     const {user} = useContext(AuthContext);
@@ -19,6 +20,37 @@ const ViewSpotDetailsPage = () => {
 
     // console.log(user.email === userEmail);
     // console.log('From Details page:',_id);
+
+    // Handle Delete
+    const handleTouristSpotDelete = (id) =>{
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+              fetch(`http://localhost:5000/deleteSpot/${id}`,{
+                method: 'DELETE',
+              })
+                .then(res => res.json())
+                .then(data =>{
+                    if(data.deletedCount > 0){
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "Your Coffee has been deleted.",
+                            icon: "success"
+                        });
+                    }
+                    // console.log(data);
+                })
+            }
+        });
+
+    }
 
     return (
         <div className="mt-10">
@@ -66,7 +98,7 @@ const ViewSpotDetailsPage = () => {
                             </dialog>
 
                             <div className="mt-1">
-                                <button className="btn btn-outline w-full">
+                                <button onClick={() => handleTouristSpotDelete(_id)} className="btn btn-outline w-full">
                                     delete
                                 </button>
                             </div>
