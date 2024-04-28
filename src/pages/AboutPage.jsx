@@ -1,6 +1,6 @@
 
-
 const AboutPage = () => {
+    
     return (
         <div className="p-5 mt-10 shadow-xl text-justify">
             <h1 className="text-center text-3xl font-bold">About Us</h1>

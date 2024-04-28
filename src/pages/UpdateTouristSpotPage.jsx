@@ -44,7 +44,7 @@ const UpdateTouristSpotPage = ({_id}) => {
                 //     confirmButtonText: 'ok'
                 // })
 
-                toast.success("Profile Updated Successfully!", {
+                toast.success("Tourist Spot Updated Successfully!", {
                     position: "top-right",
                     autoClose: 5000,
                     hideProgressBar: false,
