@@ -36,6 +36,7 @@ const NavBar = () => {
             confirmButtonText: 'OK',
         })
         logout();
+        location.reload();
     }
 
 

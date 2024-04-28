@@ -55,10 +55,6 @@ const FirebaseProvider = ({children}) => {
     const logout =()=>{
         setLoading(true);
         setUser(null);
-        {
-            <Link to='/'></Link>
-            location.reload();
-        }
         return signOut(auth);
     }
 

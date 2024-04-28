@@ -32,6 +32,8 @@ const AllTouristSpotCard = ({touristSpot}) => {
                             text: "Your tourist spot has been deleted.",
                             icon: "success"
                         });
+
+                        location.origin()
                     }
                     // console.log(data);
                     // location.reload()
@@ -42,7 +44,7 @@ const AllTouristSpotCard = ({touristSpot}) => {
     }
 
     return (
-        <div className="w-[320px] h-[600px] glass mt-10 shadow-2xl mx-auto">
+        <div className={`w-[320px] h-[570px] glass mt-10 shadow-2xl mx-auto`}>
             <figure><img className='w-full h-60' src={photo} alt="tourist spot photo"/></figure>
             <div className="card-body flex flex-col">
                 <div className='text-xl h-40'>
