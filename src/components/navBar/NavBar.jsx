@@ -16,6 +16,7 @@ const NavBar = () => {
         <li className="md:hover:text-red-600 font-medium"><NavLink to="/add/tourists/spot">Add Tourists Spot </NavLink></li>
         <li className="md:hover:text-red-600 font-medium"><NavLink to="/update/tourism/Spot">Update Tourists Spot </NavLink></li>
         <li className="md:hover:text-red-600 font-medium"><NavLink to="/myList">My List</NavLink></li>
+        <li className="md:hover:text-red-600 font-medium"><NavLink to="/add/country">Add Country</NavLink></li>
         <li className="md:hover:text-red-600 font-medium"><NavLink to="/about">About Us</NavLink></li>  
         <div>
             <li className="md:hidden"><NavLink to="/login">Sign in</NavLink></li>

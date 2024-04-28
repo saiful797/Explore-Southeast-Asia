@@ -9,6 +9,7 @@ import UpdateTouristSpotPage from "../pages/UpdateTouristSpotPage";
 import AllTouristsSpotPage from "../pages/AllTouristsSpotPage";
 import AboutPage from "../pages/AboutPage";
 import MyListPage from "../pages/MyListPage";
+import AddCountry from "../pages/AddCountry";
 
 
 const router = createBrowserRouter([
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
                 path:'/myList',
                 element:<MyListPage />,
                 loader: () => fetch('http://localhost:5000/touristSpot/:userEmail')
+            },
+            {
+                path:'/add/country',
+                element: <AddCountry />
             }
         ]
     }
