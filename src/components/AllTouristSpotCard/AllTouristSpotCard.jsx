@@ -34,7 +34,7 @@ const AllTouristSpotCard = ({touristSpot}) => {
                         });
                     }
                     // console.log(data);
-                    location.reload()
+                    // location.reload()
                 })
             }
         });
@@ -58,7 +58,7 @@ const AllTouristSpotCard = ({touristSpot}) => {
                     </Link>
                 </div>
                     {
-                        (user.email=== userEmail)?<div className="flex justify-between items-center gap-1">
+                        (user?.email=== userEmail)?<div className="flex justify-between items-center gap-1">
                             {/* <button className="btn btn-sm btn-outline">
                                 Update This Spot 
                             </button> */}
