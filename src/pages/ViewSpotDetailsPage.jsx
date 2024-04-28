@@ -52,19 +52,26 @@ const ViewSpotDetailsPage = () => {
                             {/* You can open the modal using document.getElementById('ID').showModal() method */}
                             <button className="btn btn-outline w-full" onClick={()=>document.getElementById('my_modal_4').showModal()}>Update Spot Info</button>
                             <dialog id="my_modal_4" className="modal">
-                            <div className="modal-box w-full max-w-7xl">
-                                <div>
-                                    <UpdateTouristSpotPage _id={_id} />
+                                <div className="modal-box w-full max-w-7xl">
+                                    <div>
+                                        <UpdateTouristSpotPage _id={_id} />
+                                    </div>
+                                    <div className="modal-action flex justify-center items-center">
+                                        <form method="dialog w-full">
+                                            {/* if there is a button, it will close the modal */}
+                                            <button className="btn btn-sm btn-outline text-xl w-full bg-black text-white">X</button>
+                                        </form>
+                                    </div>
                                 </div>
-                                <div className="modal-action flex justify-center items-center">
-                                    <form method="dialog w-full">
-                                        {/* if there is a button, it will close the modal */}
-                                        <button className="btn btn-sm btn-outline text-xl w-full bg-black text-white">X</button>
-                                    </form>
-                                </div>
-                            </div>
                             </dialog>
+
+                            <div className="mt-1">
+                                <button className="btn btn-outline w-full">
+                                    delete
+                                </button>
+                            </div>
                         </div>
+                        
                         :
                         ''
                     }

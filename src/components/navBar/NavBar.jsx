@@ -68,6 +68,7 @@ const NavBar = () => {
         </div>
         
         <div className="navbar-end">
+
             {
                 user?<div className="flex justify-center items-center gap-2">
 

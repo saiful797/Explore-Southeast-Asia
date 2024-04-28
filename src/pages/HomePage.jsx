@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import AllTouristSpotCard from "../components/AllTouristSpotCard/AllTouristSpotCard";
 import ReviewSlider from "../components/reviewSlider/ReviewSlider";
 
+
 const HomePage = () => {
     const [countries, setCountries] = useState([]);
     const allTouristsSpot = useLoaderData();
