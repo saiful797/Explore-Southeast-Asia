@@ -1,18 +1,27 @@
+import { useContext } from "react";
 import { useForm} from "react-hook-form"
 import Swal from "sweetalert2";
+import { AuthContext } from "../Context/firebaseProvider/FirebaseProvider";
 
 const AddTourismSpotPage = () => {
 
+    const {user} = useContext(AuthContext);
+    // console.log(user);
+
     const {register ,reset , handleSubmit} = useForm();
 
-    const onSubmit = (newTouristSpot) => {
+    const onSubmit = (touristSpotData) => {
+        const userEmail = user.email;
+        const newTouristSpotData = {...touristSpotData, userEmail};
+
+        // console.log(newTouristSpotData);
 
         fetch('http://localhost:5000/touristSpot', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json',
             },
-            body: JSON.stringify(newTouristSpot)
+            body: JSON.stringify(newTouristSpotData)
         })
         .then(res => res.json())
         .then(data =>{

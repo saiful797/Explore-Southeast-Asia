@@ -17,14 +17,11 @@ const NavBar = () => {
         <li className="md:hover:text-red-600 font-medium"><NavLink to="/update/tourism/Spot">Update Tourists Spot </NavLink></li>
         <li className="md:hover:text-red-600 font-medium"><NavLink to="/myList">My List</NavLink></li>
         <li className="md:hover:text-red-600 font-medium"><NavLink to="/about">About Us</NavLink></li>  
-        {
-            user? <div>
-                <li className="md:hidden"><NavLink to="/login">Sign in</NavLink></li>
-                <li className="md:hidden"><NavLink to="/register">Sign up</NavLink></li>
-            </div> 
-            : 
-            ''
-        }
+        <div>
+            <li className="md:hidden"><NavLink to="/login">Sign in</NavLink></li>
+            <li className="md:hidden"><NavLink to="/register">Sign up</NavLink></li>
+        </div> 
+            
     </>
 
     const myFunction = () =>{
@@ -71,18 +68,21 @@ const NavBar = () => {
             {
                 user?<div className="flex justify-center items-center gap-2">
 
-                    <div className="w-10 tooltip">
-                        {
-                            user?.photoURL? <img className="rounded-full" data-tip={user.displayName} src={user.photoURL}/>
-                            :
-                            <img className="rounded-full" src="https://i.ibb.co/Jq10C13/user.png" alt="User profile..."/>
-                        }
-                    </div>
-
-                    <div>
-                        <Link to="/">
-                            <button onClick={myFunction} className="btn btn-sm btn-outline btn-success">Logout</button>
-                        </Link>
+                    <div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
+                        <div tabIndex={0}>
+                            <div className="w-10 tooltip tooltip-left" data-tip={user?.displayName}>
+                                {user?.photoURL ? (
+                                    <img className="rounded-full" src={user.photoURL} alt="User profile"/>
+                                ) : (
+                                    <img className="rounded-full" src="https://i.ibb.co/Jq10C13/user.png" alt="User profile"/>
+                                )}
+                            </div>
+                        </div>
+                        <div className="dropdown-content z-[1] menu">
+                            <Link to="/">
+                                <button onClick={myFunction} className="btn btn-sm bg-black text-white">Logout</button> 
+                            </Link>
+                        </div>
                     </div>
 
                 </div>
