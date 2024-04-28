@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import { AuthContext } from "../Context/firebaseProvider/FirebaseProvider";
 import UpdateTouristSpotPage from "./UpdateTouristSpotPage";
 import Swal from "sweetalert2";
@@ -38,13 +38,16 @@ const ViewSpotDetailsPage = () => {
               })
                 .then(res => res.json())
                 .then(data =>{
+                    alert(data.deletedCount);
                     if(data.deletedCount > 0){
                         Swal.fire({
                             title: "Deleted!",
-                            text: "Your Coffee has been deleted.",
+                            text: "Your tourist spot has been deleted.",
                             icon: "success"
                         });
                     }
+
+                    <Link to="/"></Link>
                     // console.log(data);
                 })
             }
