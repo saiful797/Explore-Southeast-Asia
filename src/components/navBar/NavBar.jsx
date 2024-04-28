@@ -3,6 +3,7 @@ import { FiAlignJustify } from "react-icons/fi";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Context/firebaseProvider/FirebaseProvider";
 import Swal from "sweetalert2";
+import { Tooltip } from "react-tooltip"; 
 
 
 const NavBar = () => {
@@ -72,12 +73,14 @@ const NavBar = () => {
 
                     <div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
                         <div tabIndex={0}>
-                            <div className="w-12 tooltip tooltip-left" data-tip={user?.displayName}>
-                                {user?.photoURL ? (
+                            <div className="w-12" data-tooltip-id="my-tooltip" data-tooltip-content={user?.displayName} data-tooltip-place="right">
+                                
+                                {user?.photoURL ?(
                                     <img className="rounded-full" src={user.photoURL} alt="User profile"/>
                                 ) : (
                                     <img className="rounded-full" src="https://i.ibb.co/Jq10C13/user.png" alt="User profile"/>
                                 )}
+                                
                             </div>
                         </div>
                         <div className="dropdown-content z-[1] menu">
@@ -95,6 +98,7 @@ const NavBar = () => {
                 </div>
             }
         </div>
+        <Tooltip id="my-tooltip" />
     </div>
     );
 };
