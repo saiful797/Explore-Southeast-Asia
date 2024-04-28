@@ -18,10 +18,12 @@ const NavBar = () => {
         <li className="md:hover:text-red-600 font-medium"><NavLink to="/myList">My List</NavLink></li>
         <li className="md:hover:text-red-600 font-medium"><NavLink to="/add/country">Add Country</NavLink></li>
         <li className="md:hover:text-red-600 font-medium"><NavLink to="/about">About Us</NavLink></li>  
-        <div>
+        {
+            user? '' : <div>
             <li className="md:hidden"><NavLink to="/login">Sign in</NavLink></li>
             <li className="md:hidden"><NavLink to="/register">Sign up</NavLink></li>
-        </div> 
+        </div>
+        }
             
     </>
 
