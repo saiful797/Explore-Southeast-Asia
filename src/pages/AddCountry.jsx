@@ -51,7 +51,7 @@ const AddCountry = () => {
                     <label className="label">
                         <span className="label-text text-lg font-medium">Photo URL:</span>
                     </label>
-                    <input type="email" name="email" placeholder="Enter country photo  URL..." className="input input-bordered w-full" {...register("email")} required />
+                    <input type="url" name="photo" placeholder="Enter country photo  URL..." className="input input-bordered w-full" {...register("photo")} required />
                 </div>
 
                 {/* Short Description row */}

@@ -10,6 +10,7 @@ import AllTouristsSpotPage from "../pages/AllTouristsSpotPage";
 import AboutPage from "../pages/AboutPage";
 import MyListPage from "../pages/MyListPage";
 import AddCountry from "../pages/AddCountry";
+import ViewSpotDetailsPage from "../pages/ViewSpotDetailsPage";
 
 
 const router = createBrowserRouter([
@@ -46,6 +47,7 @@ const router = createBrowserRouter([
             {
                 path:'/all/tourists/spot',
                 element: <AllTouristsSpotPage />,
+                // loader: () => fetch('http://localhost:5000/touristSpot')
                 loader: () => fetch('http://localhost:5000/touristSpot')
             },
             {
@@ -56,6 +58,11 @@ const router = createBrowserRouter([
             {
                 path:'/add/country',
                 element: <AddCountry />
+            },
+            {
+                path:'/viewDetails/:id',
+                element: <ViewSpotDetailsPage />,
+                loader: ({params}) => fetch(`http://localhost:5000/touristSpot/${params.id}`)
             }
         ]
     }

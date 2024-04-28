@@ -13,10 +13,10 @@ const NavBar = () => {
     const navLinks=<>
         <li className="md:hover:text-red-600 font-extrabold"><NavLink to="/">Home </NavLink></li>
         <li className="md:hover:text-red-600 font-medium"><NavLink to="/all/tourists/spot">All Tourists Spot</NavLink></li>
-        <li className="md:hover:text-red-600 font-medium"><NavLink to="/add/tourists/spot">Add Tourists Spot </NavLink></li>
-        <li className="md:hover:text-red-600 font-medium"><NavLink to="/update/tourism/Spot">Update Tourists Spot </NavLink></li>
-        <li className="md:hover:text-red-600 font-medium"><NavLink to="/myList">My List</NavLink></li>
-        <li className="md:hover:text-red-600 font-medium"><NavLink to="/add/country">Add Country</NavLink></li>
+        {user?<li className="md:hover:text-red-600 font-medium"><NavLink to="/add/tourists/spot">Add Tourists Spot </NavLink></li> : ''}
+        {user?<li className="md:hover:text-red-600 font-medium"><NavLink to="/update/tourism/Spot">Update Tourists Spot </NavLink></li> : ''}
+        {user?<li className="md:hover:text-red-600 font-medium"><NavLink to="/myList">My List</NavLink></li> : ''}
+        {user?<li className="md:hover:text-red-600 font-medium"><NavLink to="/add/country">Add Country</NavLink></li> : ''}
         <li className="md:hover:text-red-600 font-medium"><NavLink to="/about">About Us</NavLink></li>  
         {
             user? '' : <div>
@@ -73,7 +73,7 @@ const NavBar = () => {
 
                     <div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
                         <div tabIndex={0}>
-                            <div className="w-10 tooltip tooltip-left" data-tip={user?.displayName}>
+                            <div className="w-12 tooltip tooltip-left" data-tip={user?.displayName}>
                                 {user?.photoURL ? (
                                     <img className="rounded-full" src={user.photoURL} alt="User profile"/>
                                 ) : (

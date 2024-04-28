@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
 
 const AllTouristSpotCard = ({touristSpot}) => {
-    const {photo, cost, seasonality, spot, time} = touristSpot;
+    const {_id, photo, cost, seasonality, spot, time} = touristSpot;
 
     return (
         <div className="w-80 h-[500px] glass mt-10 shadow-2xl mx-auto">
@@ -16,7 +16,7 @@ const AllTouristSpotCard = ({touristSpot}) => {
                 </div>
                 
                 <div className='mt-10 flex justify-center items-center w-full'>
-                    <Link className='w-full'>  
+                    <Link to={`/viewDetails/${_id}`} className='w-full'>  
                         <button className="btn btn-sm btn-outline  w-full">View Details</button> 
                     </Link>
                 </div>
