@@ -1,12 +1,6 @@
-import { useContext } from "react";
-import { useLoaderData, useNavigate, useParams } from "react-router-dom";
-import { AuthContext } from "../Context/firebaseProvider/FirebaseProvider";
-import UpdateTouristSpotPage from "./UpdateTouristSpotPage";
-import Swal from "sweetalert2";
+import { useLoaderData, useParams } from "react-router-dom";
 
 const ViewSpotDetailsPage = () => {
-    const {user} = useContext(AuthContext);
-    const navigate = useNavigate();
 
     const allSpots = useLoaderData();
     const {id} = useParams();
@@ -17,43 +11,7 @@ const ViewSpotDetailsPage = () => {
     const singleSpot = allSpots.find(singleSpot => singleSpot._id === id);
     // console.log(singleSpot);
 
-    const {_id, time, visitors, cost, description, photo, spot, location, country, seasonality, userEmail, } = singleSpot;
-
-    // console.log(user.email === userEmail);
-    // console.log('From Details page:',_id);
-
-    // Handle Delete
-    const handleTouristSpotDelete = (id) =>{
-        Swal.fire({
-            title: "Are you sure?",
-            text: "You won't be able to revert this!",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!"
-          }).then((result) => {
-            if (result.isConfirmed) {
-              fetch(`http://localhost:5000/deleteSpot/${id}`,{
-                method: 'DELETE',
-              })
-                .then(res => res.json())
-                .then(data =>{
-                    // alert(data.deletedCount);
-                    if(data.deletedCount > 0){
-                        Swal.fire({
-                            title: "Deleted!",
-                            text: "Your tourist spot has been deleted.",
-                            icon: "success"
-                        });
-                        navigate(location?.state|| '/myList' || '/')
-                    }
-                    // console.log(data);
-                })
-            }
-        });
-
-    }
+    const { time, visitors, cost, description, photo, spot, location, country, seasonality } = singleSpot;
 
     return (
         <div className="mt-10">
@@ -77,40 +35,7 @@ const ViewSpotDetailsPage = () => {
                     </div>
                     <p className="text-justify">
                         <span className="text-xl font-bold">Description:</span> {description}
-                    </p>
-                    
-                    {
-                        (user.email=== userEmail)?<div className="mt-10">
-                            {/* <button className="btn btn-sm btn-outline">
-                                Update This Spot 
-                            </button> */}
-                            {/* You can open the modal using document.getElementById('ID').showModal() method */}
-                            <button className="btn btn-outline w-full" onClick={()=>document.getElementById('my_modal_4').showModal()}>Update Spot Info</button>
-                            <dialog id="my_modal_4" className="modal">
-                                <div className="modal-box w-full max-w-7xl">
-                                    <div>
-                                        <UpdateTouristSpotPage _id={_id} />
-                                    </div>
-                                    <div className="modal-action flex justify-center items-center">
-                                        <form method="dialog w-full">
-                                            {/* if there is a button, it will close the modal */}
-                                            <button className="btn btn-sm btn-outline text-xl w-full bg-black text-white">X</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </dialog>
-
-                            <div className="mt-1">
-                                <button onClick={() => handleTouristSpotDelete(_id)} className="btn btn-outline w-full">
-                                    delete
-                                </button>
-                            </div>
-                        </div>
-                        
-                        :
-                        ''
-                    }
-                        
+                    </p>      
                 </div>
             </div>
         </div>
