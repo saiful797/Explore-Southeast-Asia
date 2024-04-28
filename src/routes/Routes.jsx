@@ -5,7 +5,6 @@ import HomePage from "../pages/HomePage";
 import SignInPage from "../pages/SignInPage";
 import SignUpPage from "../pages/SignUpPage";
 import AddTourismSpotPage from "../pages/AddTourismSpotPage";
-import UpdateTouristSpotPage from "../pages/UpdateTouristSpotPage";
 import AllTouristsSpotPage from "../pages/AllTouristsSpotPage";
 import AboutPage from "../pages/AboutPage";
 import MyListPage from "../pages/MyListPage";
@@ -46,17 +45,8 @@ const router = createBrowserRouter([
                 )
             },
             {
-                path:'/update/tourism/Spot',
-                element: (
-                    <ProtectedRoute>
-                        <UpdateTouristSpotPage />
-                    </ProtectedRoute>
-                )
-            },
-            {
                 path:'/all/tourists/spot',
                 element: <AllTouristsSpotPage />,
-                // loader: () => fetch('http://localhost:5000/touristSpot')
                 loader: () => fetch('http://localhost:5000/touristSpot')
             },
             {

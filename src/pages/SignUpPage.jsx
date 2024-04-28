@@ -61,7 +61,7 @@ const SignUpPage = () => {
                 icon: 'success',
                 confirmButtonText: 'OK',
             })
-
+            
             updateUserProfile(name, imageURL).then(() => {
                 navigate(location?.state || '/');
             })
