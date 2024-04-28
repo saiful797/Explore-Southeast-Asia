@@ -39,11 +39,19 @@ const router = createBrowserRouter([
             },
             {
                 path: '/add/tourists/spot',
-                element: <AddTourismSpotPage />
+                element: (
+                    <ProtectedRoute>
+                        <AddTourismSpotPage />
+                    </ProtectedRoute>
+                )
             },
             {
                 path:'/update/tourism/Spot',
-                element: <UpdateTouristSpotPage />
+                element: (
+                    <ProtectedRoute>
+                        <UpdateTouristSpotPage />
+                    </ProtectedRoute>
+                )
             },
             {
                 path:'/all/tourists/spot',
@@ -53,12 +61,20 @@ const router = createBrowserRouter([
             },
             {
                 path:'/myList',
-                element:<MyListPage />,
+                element:(
+                    <ProtectedRoute>
+                        <MyListPage />
+                    </ProtectedRoute>
+                ),
                 loader: () => fetch('http://localhost:5000/touristSpot/:userEmail')
             },
             {
                 path:'/add/country',
-                element: <AddCountry />
+                element: (
+                    <ProtectedRoute>
+                        <AddCountry />
+                    </ProtectedRoute>
+                )
             },
             {
                 path:'/viewDetails/:id',

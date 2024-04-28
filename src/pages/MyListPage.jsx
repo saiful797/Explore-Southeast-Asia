@@ -16,9 +16,7 @@ const MyListPage = () => {
     },[user])
 
     const newMyList = myList.filter(spot => user.email === spot.userEmail);
-
-    // console.log(newMyList);
-
+    // console.log(newMyList)
     return (
         <div className="mx-auto grid md:grid-cols-2 lg:grid-cols-3">
             {
