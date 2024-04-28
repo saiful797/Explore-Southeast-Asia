@@ -16,7 +16,7 @@ const ViewSpotDetailsPage = () => {
 
     const {time, visitors, cost, description, photo, spot, location, country, seasonality, userEmail, } = singleSpot;
 
-    console.log(user.email && userEmail);
+    //console.log(user.email && userEmail);
 
     return (
         <div className="mt-10">

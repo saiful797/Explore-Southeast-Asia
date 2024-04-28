@@ -11,6 +11,7 @@ import AboutPage from "../pages/AboutPage";
 import MyListPage from "../pages/MyListPage";
 import AddCountry from "../pages/AddCountry";
 import ViewSpotDetailsPage from "../pages/ViewSpotDetailsPage";
+import ProtectedRoute from "../protectedRoute/ProtectedRoute";
 
 
 const router = createBrowserRouter([
@@ -61,7 +62,11 @@ const router = createBrowserRouter([
             },
             {
                 path:'/viewDetails/:id',
-                element: <ViewSpotDetailsPage />,
+                element: (
+                    <ProtectedRoute>
+                        <ViewSpotDetailsPage />
+                    </ProtectedRoute>
+                ),
                 loader: ({params}) => fetch(`http://localhost:5000/touristSpot/${params.id}`)
             }
         ]

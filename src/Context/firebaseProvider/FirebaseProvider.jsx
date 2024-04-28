@@ -16,14 +16,17 @@ const githubProvider = new GithubAuthProvider();
 const FirebaseProvider = ({children}) => {
 
     const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true)
 
     // Create user with email and password
     const createUser = (email, password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
     // Update user profile with name and imageURL
     const updateUserProfile =(name, imageURL) =>{
+        setLoading(true);
         return updateProfile(auth.currentUser,{
             displayName: name,
             photoURL: imageURL,
@@ -33,20 +36,24 @@ const FirebaseProvider = ({children}) => {
     // Login Process
     // User sign in (Log in with email and password)
     const singInUser = (email, password) =>{
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)
     }
 
     // Google pop up log in
     const googleLogin = () =>{
+        setLoading(true);
         return signInWithPopup(auth, googleProvider);
     }
     // Github pop up log in
     const githubLogin = () =>{
+        setLoading(true);
         return signInWithPopup(auth, githubProvider);
     }
 
     // Logout Process
     const logout =()=>{
+        setLoading(true);
         setUser(null);
         {
             <Link to='/'></Link>
@@ -61,25 +68,27 @@ const FirebaseProvider = ({children}) => {
             if (user) {
               setUser(user);
             } 
+            setLoading(false);
         });
 
         return () => unsubscribe();
     })
 
-    const allValues ={
+    const authInfo ={
         createUser,
         updateUserProfile,
         singInUser,
         googleLogin,
         githubLogin,
         logout,
+        loading,
         user,
     }
 
 
     return (
         
-        <AuthContext.Provider value = {allValues}>
+        <AuthContext.Provider value = {authInfo}>
             {children}
         </AuthContext.Provider>
     );
