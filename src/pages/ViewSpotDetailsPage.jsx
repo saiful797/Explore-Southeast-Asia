@@ -1,12 +1,13 @@
 import { useContext } from "react";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../Context/firebaseProvider/FirebaseProvider";
 import UpdateTouristSpotPage from "./UpdateTouristSpotPage";
 import Swal from "sweetalert2";
 
 const ViewSpotDetailsPage = () => {
     const {user} = useContext(AuthContext);
-    
+    const navigate = useNavigate();
+
     const allSpots = useLoaderData();
     const {id} = useParams();
 
@@ -38,16 +39,15 @@ const ViewSpotDetailsPage = () => {
               })
                 .then(res => res.json())
                 .then(data =>{
-                    alert(data.deletedCount);
+                    // alert(data.deletedCount);
                     if(data.deletedCount > 0){
                         Swal.fire({
                             title: "Deleted!",
                             text: "Your tourist spot has been deleted.",
                             icon: "success"
                         });
+                        navigate(location?.state|| '/myList' || '/')
                     }
-
-                    <Link to="/"></Link>
                     // console.log(data);
                 })
             }
