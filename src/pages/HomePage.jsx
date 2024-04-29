@@ -30,7 +30,7 @@ const HomePage = () => {
                 <div className="bg-black p-3 mb-10">
                     <h1 className="text-4xl font-extrabold text-center text-white">Countries </h1>
                 </div>
-                <div className="gap-6">
+                <div className="">
                     <CountriesCard />
                 </div>
                 <div className="mt-20">

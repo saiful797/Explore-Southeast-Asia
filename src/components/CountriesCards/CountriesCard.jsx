@@ -14,7 +14,7 @@ const CountriesCard = () => {
 
     // console.log(countries);
     return (
-        <div className="grid lg:grid-cols-3  gap-4 place-items-center">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3  gap-6 place-items-center">
             {
                 countries.map(country => <CountryCard key={country._id} country={country} />)
             }
