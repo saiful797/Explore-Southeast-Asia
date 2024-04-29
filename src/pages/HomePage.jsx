@@ -1,23 +1,14 @@
 import { useLoaderData } from "react-router-dom";
-import CountriesCard from "../components/CountriesCard/CountriesCard";
+import CountriesCard from "../components/CountriesCards/CountriesCard";
 import FAQ from "../components/FAQ/FAQ";
 import SliderSwiper from "../components/sliderSwiper/SliderSwiper";
-import { useEffect, useState } from "react";
 import AllTouristSpotCard from "../components/AllTouristSpotCard/AllTouristSpotCard";
 import ReviewSlider from "../components/reviewSlider/ReviewSlider";
 
 
 const HomePage = () => {
-    const [countries, setCountries] = useState([]);
+    
     const allTouristsSpot = useLoaderData();
-
-    useEffect(() => {
-        fetch("countries.json")
-          .then(res => res.json())
-          .then(data => {
-            setCountries(data);
-          }) 
-    })
 
     return (
         <div className="mt-10">
@@ -39,10 +30,8 @@ const HomePage = () => {
                 <div className="bg-black p-3 mb-10">
                     <h1 className="text-4xl font-extrabold text-center text-white">Countries </h1>
                 </div>
-                <div className="grid lg:grid-cols-2 place-items-center gap-6">
-                    {
-                        countries.map(country => <CountriesCard key={country.id} country={country} />)
-                    }
+                <div className="gap-6">
+                    <CountriesCard />
                 </div>
                 <div className="mt-20">
                     <div className="bg-black p-3 mb-10 shadow-transparent">
