@@ -25,8 +25,8 @@ const SliderSwiper = () => {
             <SwiperSlide>
                 <div className='grid grid-cols-2'>
                     <div className='flex flex-col justify-center items-center md:space-y-4'>
-                        <h1 className='text-cyan-300 font-Tangerine text-4xl font-bold'>Sajek</h1> 
-                        <h4 className='text-orange-400 font-Tangerine text-3xl'>a popular tourist spot.</h4>
+                        <h1 className='text-2xl font-Robot font-extralight'>Sajek</h1> 
+                        <h4 className='text-orange-400 font-Tangerine text-4xl text-center'>a popular tourist spot.</h4>
                         <p className='text-balance text-center'>It's located in the Rangamati Hill District.</p>
                         <p className='text-3xl font-bold text-green-600'>Bangladesh</p>
                     </div>
@@ -38,8 +38,8 @@ const SliderSwiper = () => {
             <SwiperSlide>
                 <div className='grid grid-cols-2'>
                     <div className='flex flex-col justify-center items-center md:space-y-4'>
-                        <h1 className='text-cyan-300 font-Tangerine text-4xl font-bold'>Bali</h1> 
-                        <h4 className='text-orange-400 font-Tangerine text-3xl text-center'> an Indonesian paradise.</h4>
+                        <h1 className='text-2xl font-Robot font-extralight'>Bali</h1> 
+                        <h4 className='text-orange-400 font-Tangerine text-4xl text-center'> an Indonesian paradise.</h4>
                         <p className='text-balance text-center'>Where culture meets coastline and adventure awaits at every turn.</p>
                         <p className='text-3xl font-bold text-red-600 text-center'>Indonesia</p>
                     </div>
@@ -51,8 +51,8 @@ const SliderSwiper = () => {
             <SwiperSlide>
                 <div className='grid grid-cols-2'>
                     <div className='flex flex-col justify-center items-center md:space-y-4'>
-                        <h1 className='text-cyan-300 font-Tangerine text-4xl font-bold'>Chiang Mai</h1> 
-                        <h4 className='text-orange-400 font-Tangerine text-3xl text-center'> a Thailand paradise.</h4>
+                        <h1 className='text-2xl font-Robot font-extralight'>Chiang Mai</h1> 
+                        <h4 className='text-orange-400 font-Tangerine text-4xl text-center'> a Thailand paradise.</h4>
                         <p className='text-balance text-center'>Where Culture Blossoms Amidst Nature's Splendor.</p>
                         <p className='text-3xl font-bold text-blue-950 text-center'>Thailand</p>
                     </div>
@@ -64,8 +64,8 @@ const SliderSwiper = () => {
             <SwiperSlide>
                 <div className='grid grid-cols-2'>
                     <div className='flex flex-col justify-center items-center md:space-y-4'>
-                        <h1 className='text-cyan-300 font-Tangerine text-3xl font-bold'>Bokor National Park</h1> 
-                        <h4 className='text-orange-400 font-Tangerine text-3xl text-center'> a Cambodian park.</h4>
+                        <h1 className='text-3xl font-Robot font-extralight'>Bokor National Park</h1> 
+                        <h4 className='text-orange-400 font-Tangerine text-4xl text-center'> a Cambodian park.</h4>
                         <p className='text-balance text-center'>Where Nature's Majesty Reveals Itself in Cambodia's Heart</p>
                         <p className='text-3xl font-bold text-amber-500 text-center'>Cambodia</p>
                     </div>

@@ -13,6 +13,7 @@ export default {
       fontFamily:{
         DancingScript:['Dancing Script','cursive'],
         Tangerine:['Tangerine','cursive'],
+        Robot: ['Roboto', 'sans-serif']
       }
     },
   },

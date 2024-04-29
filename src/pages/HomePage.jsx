@@ -8,28 +8,30 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 
 const HomePage = () => {
-    
+
     const allTouristsSpot = useLoaderData();
     const [text] = useTypewriter({
-        words: ['to our website', 'your family', 'to journey with us.'],
+        words: ['Embrace the Journey, Live Fully!', 'Explore Southeast Asia!', 'Discover Next Destination with Us!', 'Explore More, Live Brighter!', "Adventure Beckons, Answer the Call!",'Travel, Thrive, Transform, Repeat!','Dream, Discover, Connect, Grow!'],
         loop: {},
-        typeSpeed:120,
+        typeSpeed: 120,
+        deleteSpeed: 40
     });
 
+
     return (
-        <div className="mt-10">
-            <div>
-                <div className="m-14">
-                    Welcome {''}
-                    <span className="font-bold text-orange-600">
+        <div className="mt-6">
+            <div className="flex justify-center items-center">
+                <div className="text-sm md:text-xl font-medium font-Robot md:font-bold">
+                    <span className="text-red-600">Welcome</span> !!{' '}
+                    <span className="text-[#ffb219]">
                         {text}
                     </span>
-                    <span className="text-green-600">
-                        <Cursor cursorStyle='|'/>
+                    <span>
+                        <Cursor cursorStyle='|' cursorColor='red'/>
                     </span>
                 </div>
             </div>
-            <div className="z-[-1] mt-10">
+            <div className="z-[-1] mt-6">
                 <SliderSwiper />
             </div>
             <div className="mt-10">
