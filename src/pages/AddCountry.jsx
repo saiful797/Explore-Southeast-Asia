@@ -11,6 +11,7 @@ const AddCountry = () => {
         console.log(newCountry);
 
         fetch('https://explore-southeast-aisa-server-76sk981xb.vercel.app/addCountry', {
+            mode: 'no-cors',
             method: 'POST',
             headers: {
                 'content-type' : 'application/json',

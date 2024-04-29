@@ -10,7 +10,7 @@ const AllTouristsSpotPage = () => {
     const [sortedSpot, setSortedSpot] = useState(allTouristsSpot)
 
     const handleSortButton = () =>{
-        fetch('http://localhost:5000/sortedSpots')
+        fetch('https://explore-southeast-aisa-server.vercel.app/sortedSpots')
           .then(res => res.json())
           .then(data => {
             // console.log(data);

@@ -14,7 +14,8 @@ const UpdateTouristSpotPage = ({id}) => {
         // const updatedSpot = data;
         // console.log(updateSpot);
 
-        fetch(`https://explore-southeast-aisa-server-76sk981xb.vercel.app/updateSpot/${id}`,{
+        fetch(`https://explore-southeast-aisa-server.vercel.app/updateSpot/${id}`,{
+            mode: 'no-cors',
             method: 'PUT',
             headers:{
                 'content-type': 'application/json'

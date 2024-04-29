@@ -4,7 +4,7 @@ import CountryCard from './CountryCard';
 const CountriesCard = () => {
     const [countries, setCountries] = useState([]);
     useEffect(() =>{
-        fetch('http://localhost:5000/addCountry')
+        fetch('https://explore-southeast-aisa-server.vercel.app/addCountry')
           .then(res => res.json())
           .then(data => {
             // console.log(data);

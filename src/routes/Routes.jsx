@@ -22,7 +22,7 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <HomePage />,
-                loader: () => fetch('https://explore-southeast-aisa-server-76sk981xb.vercel.app/touristSpot')
+                loader: () => fetch('https://explore-southeast-aisa-server.vercel.app/touristSpot')
             },
             {
                 path:'/about',
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
             {
                 path:'/all/tourists/spot',
                 element: <AllTouristsSpotPage />,
-                loader: () => fetch('https://explore-southeast-aisa-server-76sk981xb.vercel.app/touristSpot')
+                loader: () => fetch('https://explore-southeast-aisa-server.vercel.app/touristSpot')
             },
             {
                 path:'/myList',
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
                         <MyListPage />
                     </ProtectedRoute>
                 ),
-                loader: () => fetch('https://explore-southeast-aisa-server-76sk981xb.vercel.app/touristSpot/:userEmail')
+                loader: () => fetch('https://explore-southeast-aisa-server.vercel.app/:userEmail')
             },
             {
                 path:'/add/country',
@@ -73,7 +73,7 @@ const router = createBrowserRouter([
                         <ViewSpotDetailsPage />
                     </ProtectedRoute>
                 ),
-                loader: ({params}) => fetch(`https://explore-southeast-aisa-server-76sk981xb.vercel.app/touristSpot/${params.id}`)
+                loader: ({params}) => fetch(`https://explore-southeast-aisa-server.vercel.app/touristSpot/${params.id}`)
             }
         ]
     }
