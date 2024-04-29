@@ -4,15 +4,32 @@ import FAQ from "../components/FAQ/FAQ";
 import SliderSwiper from "../components/sliderSwiper/SliderSwiper";
 import AllTouristSpotCard from "../components/AllTouristSpotCard/AllTouristSpotCard";
 import ReviewSlider from "../components/reviewSlider/ReviewSlider";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 
 const HomePage = () => {
     
     const allTouristsSpot = useLoaderData();
+    const [text] = useTypewriter({
+        words: ['to our website', 'your family', 'to journey with us.'],
+        loop: {},
+        typeSpeed:120,
+    });
 
     return (
         <div className="mt-10">
-            <div className="z-[-1]">
+            <div>
+                <div className="m-14">
+                    Welcome {''}
+                    <span className="font-bold text-orange-600">
+                        {text}
+                    </span>
+                    <span className="text-green-600">
+                        <Cursor cursorStyle='|'/>
+                    </span>
+                </div>
+            </div>
+            <div className="z-[-1] mt-10">
                 <SliderSwiper />
             </div>
             <div className="mt-10">
