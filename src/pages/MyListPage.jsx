@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Context/firebaseProvider/FirebaseProvider";
-import AllTouristSpotCard from "../components/AllTouristSpotCard/AllTouristSpotCard";
+import MyListReactTable from "../components/MyListReactTable/MyListReactTable";
 
 const MyListPage = () => {
     const {user} = useContext(AuthContext);
@@ -20,7 +20,7 @@ const MyListPage = () => {
     return (
         <div className="mx-auto grid md:grid-cols-2 lg:grid-cols-3">
             {
-                newMyList.map(touristSpot => <AllTouristSpotCard key={touristSpot._id} touristSpot={touristSpot} />)
+                newMyList.map(touristSpot => <MyListReactTable key={touristSpot._id} touristSpot={touristSpot} />)
             }
         </div>
     );
