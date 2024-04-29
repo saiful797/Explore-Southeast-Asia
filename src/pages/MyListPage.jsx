@@ -69,16 +69,16 @@ const MyListPage = () => {
 
                 <tbody>
                     {
-                        newMyList.map((list, id) => (
+                        newMyList.map((list, i) => (
                             
-                            <tr key={id} className="">
-                                <td>{id+1}</td>
+                            <tr key={i} className="">
+                                <td>{i+1}</td>
                                 <td>{list.spot}</td>
                                 <td>{list.country}</td>
                                 <td>${list.cost}</td>
 
                                 <td className="flex gap-1">
-                                    <div className="flex justify-between items-center gap-1">
+                                    <div className="flex justify-between items-center">
                                         {/* You can open the modal using document.getElementById('ID').showModal() method */}
                                         <button className="btn btn-sm btn-outline" onClick={()=>document.getElementById('my_modal_4').showModal()}>
                                             <AiOutlineEdit />
