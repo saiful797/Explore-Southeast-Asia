@@ -11,7 +11,7 @@ const ProtectedRoute = ({ children }) => {
 
     if(loading) return <span className="loading loading-spinner loading-lg"></span>
     if(user) return children ;
-    return <Navigate state={location.pathname} to={`/login`} replace/>
+    return <Navigate state={location?.pathname || '/'} to={`/login`} replace/>
 };
 
 ProtectedRoute.propTypes= {

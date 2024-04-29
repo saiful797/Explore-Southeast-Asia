@@ -1,33 +1,20 @@
 import PropTypes from 'prop-types';
-// import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-// import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
-const UpdateTouristSpotPage = ({_id}) => {
-    // console.log('From Update Modal:',_id)
+const UpdateTouristSpotPage = ({id}) => {
 
-    // const [updateSpot, setUpdateSpot] = useState([]);
     const {register, reset , handleSubmit} = useForm();
-
-    // useEffect(()=>{
-    //     fetch(`http://localhost:5000/singleSpot/${_id}`)
-    //       .then(res => res.json())
-    //       .then(data => {
-    //         // console.log(data);
-    //         setUpdateSpot(data);
-    //       })
-    // },[_id])
-
-    // const {photo, cost, country, location, spot, seasonality, time, visitors, description} = updateSpot;
+    const navigate = useNavigate();
 
     const onSubmit = (data) => {
-        console.log(data);
+        // console.log("id:",id, "Updated Data:",data);
         // const updatedSpot = data;
         // console.log(updateSpot);
 
-        fetch(`http://localhost:5000/updateSpot/${_id}`,{
+        fetch(`http://localhost:5000/updateSpot/${id}`,{
             method: 'PUT',
             headers:{
                 'content-type': 'application/json'
@@ -37,12 +24,6 @@ const UpdateTouristSpotPage = ({_id}) => {
           .then(res => res.json())
           .then(data => {
             if(data.modifiedCount > 0){
-                // Swal.fire({
-                //     title: 'Success!',
-                //     text: 'Coffee Updated Successfully!',
-                //     icon: 'success',
-                //     confirmButtonText: 'ok'
-                // })
 
                 toast.success("Tourist Spot Updated Successfully!", {
                     position: "top-right",
@@ -52,7 +33,9 @@ const UpdateTouristSpotPage = ({_id}) => {
                     pauseOnHover: true,
                     draggable: true,
                     progress: undefined
-                  });
+                });
+
+                navigate(location?.pathname || '/myList')
 
                 reset();
             }
@@ -109,7 +92,7 @@ const UpdateTouristSpotPage = ({_id}) => {
                         <label className="label">
                             <span className="label-text text-lg font-medium">Average Cost</span>
                         </label>
-                        <input type="text" name="cost"  placeholder="Enter Average Cost $(US Dollar)..." className="input input-bordered" {...register("cost")} required />
+                        <input type="number" name="cost"  placeholder="Enter Average Cost $(US Dollar)..." className="input input-bordered" {...register("cost")} required />
                     </div>
                 </div>
 
@@ -146,7 +129,7 @@ const UpdateTouristSpotPage = ({_id}) => {
 };
 
 UpdateTouristSpotPage.propTypes={
-    _id: PropTypes.string,
+    id: PropTypes.string,
 }
 
 export default UpdateTouristSpotPage;

@@ -20,7 +20,11 @@ const MyListPage = () => {
 
     const newMyList = myList.filter(spot => user.email === spot.userEmail);
     // console.log(newMyList)
+
+    // Handle Spot Delete
     const handleTouristSpotDelete = (id) =>{
+        // console.log('Deleted id: ',id);
+
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -72,15 +76,18 @@ const MyListPage = () => {
                                 <td>{list.spot}</td>
                                 <td>{list.country}</td>
                                 <td>${list.cost}</td>
-                                
+
                                 <td className="flex gap-1">
                                     <div className="flex justify-between items-center gap-1">
                                         {/* You can open the modal using document.getElementById('ID').showModal() method */}
-                                        <button className="btn btn-sm btn-outline" onClick={()=>document.getElementById('my_modal_4').showModal()}><AiOutlineEdit /></button>
+                                        <button className="btn btn-sm btn-outline" onClick={()=>document.getElementById('my_modal_4').showModal()}>
+                                            <AiOutlineEdit />
+                                        </button>
+
                                         <dialog id="my_modal_4" className="modal">
                                             <div className="modal-box w-full max-w-6xl">
                                                 <div>
-                                                    <UpdateTouristSpotPage _id={list._id} />
+                                                    <UpdateTouristSpotPage id={list._id} />
                                                 </div>
                                                 <div className="modal-action flex justify-center items-center">
                                                     <form method="dialog w-full">

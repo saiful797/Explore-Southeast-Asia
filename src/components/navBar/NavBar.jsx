@@ -86,9 +86,9 @@ const NavBar = () => {
                             </div>
                         </div>
                         <div className="dropdown-content z-[1] menu">
-                            <Link to="/">
+                            <NavLink to="/">
                                 <button onClick={myFunction} className="btn btn-sm bg-black text-white">Logout</button> 
-                            </Link>
+                            </NavLink>
                         </div>
                     </div>
 
