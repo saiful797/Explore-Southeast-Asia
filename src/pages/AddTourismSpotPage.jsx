@@ -16,8 +16,7 @@ const AddTourismSpotPage = () => {
 
         // console.log(newTouristSpotData);
 
-        fetch('https://explore-southeast-aisa-server-76sk981xb.vercel.app/touristSpot', {
-            mode: 'no-cors',
+        fetch('https://explore-southeast-aisa-server.vercel.app/touristSpot', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json',
@@ -40,9 +39,9 @@ const AddTourismSpotPage = () => {
     }
    
     return (
-        <div className="p-5 md:p-16 shadow-2xl">
+        <div className="p-5 md:p-12 shadow-2xl">
 
-            <h1 className="text-2xl md:text-5xl font-extrabold mb-5 text-center">Add a Tourist Spot</h1>
+            <h1 className="text-2xl md:text-5xl p-3 bg-slate-200  font-extrabold mb-5 text-center">Add a Tourist Spot</h1>
             
             <form onSubmit={handleSubmit(onSubmit)}>
                 {/* form user name and email row */}

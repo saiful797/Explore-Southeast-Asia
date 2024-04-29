@@ -6,7 +6,7 @@ const AllTouristSpotCard = ({touristSpot}) => {
     const {_id, photo, cost, seasonality, spot, time} = touristSpot;
 
     return (
-        <div className={`w-[320px] h-[570px] glass mt-10 shadow-2xl mx-auto`}>
+        <div className={`w-[320px] h-[550px] glass mt-10 shadow-2xl mx-auto`}>
             <figure><img className='w-full h-60' src={photo} alt="tourist spot photo"/></figure>
             <div className="card-body flex flex-col">
                 <div className='text-xl h-40'>

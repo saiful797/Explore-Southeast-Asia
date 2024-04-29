@@ -56,7 +56,7 @@ const router = createBrowserRouter([
                         <MyListPage />
                     </ProtectedRoute>
                 ),
-                loader: () => fetch('https://explore-southeast-aisa-server.vercel.app/:userEmail')
+                loader: () => fetch('https://explore-southeast-aisa-server.vercel.app/touristSpot/:userEmail')
             },
             {
                 path:'/add/country',

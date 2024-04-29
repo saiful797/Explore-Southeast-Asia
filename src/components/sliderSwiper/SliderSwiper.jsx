@@ -52,9 +52,9 @@ const SliderSwiper = () => {
                 <div className='grid grid-cols-2'>
                     <div className='flex flex-col justify-center items-center md:space-y-4'>
                         <h1 className='text-2xl font-Robot font-extralight'>Chiang Mai</h1> 
-                        <h4 className='text-orange-400 font-Tangerine text-4xl text-center'> a Thailand paradise.</h4>
+                        <h4 className='text-lime-600 font-Tangerine text-4xl text-center'> a Thailand paradise.</h4>
                         <p className='text-balance text-center'>Where Culture Blossoms Amidst Nature's Splendor.</p>
-                        <p className='text-3xl font-bold text-blue-950 text-center'>Thailand</p>
+                        <p className='text-3xl font-bold text-yellow-300 text-center'>Thailand</p>
                     </div>
                     <div className=' h-full '>
                         <img className='w-full h-[200px] md:h-[280px] lg:h-[450px]' src="https://i.postimg.cc/PJDk52S4/Chiang-Mai.jpg" alt=""/>
@@ -67,7 +67,7 @@ const SliderSwiper = () => {
                         <h1 className='text-3xl font-Robot font-extralight'>Bokor National Park</h1> 
                         <h4 className='text-orange-400 font-Tangerine text-4xl text-center'> a Cambodian park.</h4>
                         <p className='text-balance text-center'>Where Nature's Majesty Reveals Itself in Cambodia's Heart</p>
-                        <p className='text-3xl font-bold text-amber-500 text-center'>Cambodia</p>
+                        <p className='text-3xl font-bold text-teal-600 text-center'>Cambodia</p>
                     </div>
                     <div className=' h-full '>
                         <img className='w-full h-[200px] md:h-[280px] lg:h-[450px]' src="https://i.postimg.cc/Hs0fvJRV/Bokor-National.jpg" alt=""/>

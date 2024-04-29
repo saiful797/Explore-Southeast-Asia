@@ -2,9 +2,9 @@ import { useLoaderData } from "react-router-dom";
 import AllTouristSpotCard from "../components/AllTouristSpotCard/AllTouristSpotCard";
 import { IoIosArrowDown } from "react-icons/io";
 import { useState } from "react";
-// https://i.postimg.cc/Qx9BdCBj/1.jpg
 
 const AllTouristsSpotPage = () => {
+
     const allTouristsSpot = useLoaderData();
 
     const [sortedSpot, setSortedSpot] = useState(allTouristsSpot)
@@ -19,7 +19,7 @@ const AllTouristsSpotPage = () => {
     }
 
     return (
-        <div className="mt-10">
+        <div className="mt-10 min-h-screen">
             <div className="flex justify-center items-center">
                 <div className="dropdown dropdown-bottom">
                 <div tabIndex={0} role="button" className="btn btn-outline btn-sm btn-info">SORT BY <span className="text-lg"><IoIosArrowDown /></span></div>

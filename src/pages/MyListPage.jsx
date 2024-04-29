@@ -57,14 +57,14 @@ const MyListPage = () => {
     }
 
     return (
-        <div className="mx-auto container mt-5">
-            <table className="table">
-                <thead className="text-black">
-                    <th>ID</th>
-                    <th>Spot Name</th>
-                    <th>Country</th>
-                    <th>Average Cost</th>
-                    <th>Action</th>
+        <div className="mx-auto mt-5 min-h-screen">
+            <table className="table border  border-collapse border-slate-400">
+                <thead className="text-base">
+                    <th className="border border-slate-300">ID</th>
+                    <th className="border border-slate-300">Spot Name</th>
+                    <th className="border border-slate-300">Country</th>
+                    <th className="border border-slate-300">Ave. Cost</th>
+                    <th className="border border-slate-300">Action</th>
                 </thead>
 
                 <tbody>
@@ -72,12 +72,12 @@ const MyListPage = () => {
                         newMyList.map((list, i) => (
                             
                             <tr key={i} className="">
-                                <td>{i+1}</td>
-                                <td>{list.spot}</td>
-                                <td>{list.country}</td>
-                                <td>${list.cost}</td>
+                                <td className="border border-slate-300">{i+1}</td>
+                                <td className="border border-slate-300">{list.spot}</td>
+                                <td className="border border-slate-300">{list.country}</td>
+                                <td className="border border-slate-300">${list.cost}</td>
 
-                                <td className="flex gap-1">
+                                <td className="md:flex gap-1 space-y-1 md:space-y-0 border border-slate-300">
                                     <div className="flex justify-between items-center">
                                         {/* You can open the modal using document.getElementById('ID').showModal() method */}
                                         <button className="btn btn-sm btn-outline" onClick={()=>document.getElementById('my_modal_4').showModal()}>
