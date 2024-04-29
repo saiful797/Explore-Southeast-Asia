@@ -16,7 +16,7 @@ const AddTourismSpotPage = () => {
 
         // console.log(newTouristSpotData);
 
-        fetch('http://localhost:5000/touristSpot', {
+        fetch('https://explore-southeast-aisa-server-76sk981xb.vercel.app/touristSpot', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json',

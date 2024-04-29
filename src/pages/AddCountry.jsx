@@ -10,7 +10,7 @@ const AddCountry = () => {
 
         console.log(newCountry);
 
-        fetch('http://localhost:5000/addCountry', {
+        fetch('https://explore-southeast-aisa-server-76sk981xb.vercel.app/addCountry', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json',

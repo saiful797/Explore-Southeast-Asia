@@ -10,7 +10,7 @@ const MyListPage = () => {
     const [myList, setMyList] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/touristSpot/${user?.email}`)
+        fetch(`https://explore-southeast-aisa-server-76sk981xb.vercel.app/touristSpot/${user?.email}`)
           .then(res => res.json())
           .then(data => {
             // console.log(data)
@@ -35,7 +35,7 @@ const MyListPage = () => {
             confirmButtonText: "Yes, delete it!"
           }).then((result) => {
             if (result.isConfirmed) {
-              fetch(`http://localhost:5000/deleteSpot/${id}`,{
+              fetch(`https://explore-southeast-aisa-server-76sk981xb.vercel.app/deleteSpot/${id}`,{
                 method: 'DELETE',
               })
                 .then(res => res.json())
