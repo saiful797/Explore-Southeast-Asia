@@ -6,7 +6,6 @@ import { AuthContext } from "../Context/firebaseProvider/FirebaseProvider";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
 
-
 const SignUpPage = () => {
 
     const {createUser, updateUserProfile} =  useContext(AuthContext);
@@ -19,7 +18,6 @@ const SignUpPage = () => {
     const onSubmit = (data) =>{
         // console.log(data);
         const {name, email, password, imageURL } = data;
-        // console.log(email, password);
 
         if(password.length < 6){
             Swal.fire({
@@ -28,7 +26,6 @@ const SignUpPage = () => {
                 icon: 'error',
                 confirmButtonText: 'OK',
             })
-
             return;
         }
 
@@ -39,19 +36,16 @@ const SignUpPage = () => {
                 icon: 'error',
                 confirmButtonText: 'OK',
             })
-
             return;
         }
 
         else if(!/[a-z]/.test(password)){
-
             Swal.fire({
                 title: 'Error!',
                 text: 'Your password should have at least one Uppercase and Lowercase character!',
                 icon: 'error',
                 confirmButtonText: 'OK',
             })
-
             return;
         }
 
@@ -62,7 +56,6 @@ const SignUpPage = () => {
                 icon: 'success',
                 confirmButtonText: 'OK',
             })
-            
             updateUserProfile(name, imageURL).then(() => {
                 navigate(location?.state || '/');
             })
