@@ -8,15 +8,12 @@ const ViewSpotDetailsPage = () => {
 
     // console.log('Spot:', allSpots);
     // console.log('ID:', id);
-
     const singleSpot = allSpots.find(singleSpot => singleSpot._id === id);
     // console.log(singleSpot);
-
     const { time, visitors, cost, description, photo, spot, location, country, seasonality } = singleSpot;
 
     return (
         <div className="mt-10">
-
             <Helmet>
                 <title>View Spot Details Page</title>
             </Helmet>      
