@@ -110,9 +110,9 @@ const NavBar = () => {
                             <div className="w-12 h-12" data-tooltip-id="my-tooltip" data-tooltip-content={user?.displayName} data-tooltip-place="left">
                                 
                                 {user?.photoURL ?(
-                                    <img className="rounded-full" src={user.photoURL} alt="User profile"/>
+                                    <img className="w-12 h-12 rounded-full" src={user.photoURL} alt="User profile"/>
                                 ) : (
-                                    <img className="rounded-full" src="https://i.ibb.co/Jq10C13/user.png" alt="User profile"/>
+                                    <img className="w-12 h-12 rounded-full" src="https://i.ibb.co/Jq10C13/user.png" alt="User profile"/>
                                 )}
                                 
                             </div>
