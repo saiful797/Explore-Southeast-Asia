@@ -9,8 +9,8 @@ const AllTouristSpotCard = ({touristSpot}) => {
         <div className={`w-[320px] h-[550px] glass mt-10 shadow-2xl mx-auto`}>
             <figure><img className='w-full h-60' src={photo} alt="tourist spot photo"/></figure>
             <div className="card-body flex flex-col">
-                <div className='text-xl h-40'>
-                    <h3>Spot Name:<span className='font-bold'>{spot}</span></h3>
+                <div className='text-xl h-40 space-y-3'>
+                    <h3>Spot Name: <span className='font-bold'>{spot}</span></h3>
                     <h5>Average Cost: <span className='font-bold'>${cost}</span></h5>
                     <p>travel time: <span className='font-bold'>{time}</span></p>
                     <p>Seasonality: <span className='font-bold'>{seasonality}</span></p>

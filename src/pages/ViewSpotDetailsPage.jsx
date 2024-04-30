@@ -20,21 +20,21 @@ const ViewSpotDetailsPage = () => {
                 <div className="w-full">
                     <img className="h-full" src={photo} alt="Tourist spot photo" />
                 </div>
-                <div className="p-5">
-                    <h2 className="text-lg font-medium">Location: <span className="text-xl font-bold">{location}</span></h2>
-                    <h3 className="text-lg font-medium">Country: <span className="text-4xl font-bold">{country}</span></h3>
+                <div className="p-5 space-y-4">
+                    <h2 className="text-lg font-extralight">Location: <span className="text-2xl font-bold">{location}</span></h2>
+                    <h3 className="text-lg font-extralight">Country: <span className="text-4xl font-bold">{country}</span></h3>
                     <div className="md:flex md:justify-between">
                         <div className="">
-                            <h4 className="text-lg font-medium">Average Cost(per person): ${cost}</h4>
-                            <p className="text-lg font-medium">Seasonality: {seasonality}</p>
+                            <h4 className="text-lg font-extralight">Average Cost(per person): <span className="text-2xl font-bold">${cost}</span></h4>
+                            <p className="text-lg font-extralight mt-5">Seasonality: <span className="text-2xl font-bold">{seasonality}</span> </p>
                         </div>
-                        <div>
-                            <h4 className="text-lg font-medium">Time: {time}</h4>
-                            <p className="text-lg font-medium">Average Visitors Per Year: {visitors}</p>
+                        <div className="">
+                            <h4 className="text-lg font-extralight mt-5 md:mt-0">Time: <span className="text-2xl font-bold"> {time}</span></h4>
+                            <p className="text-lg font-extralight mt-5">Average Visitors (Per Year): <span className="text-2xl font-bold">{visitors}</span></p>
                         </div>
                     </div>
                     <p className="text-justify">
-                        <span className="text-xl font-bold">Description:</span> {description}
+                        <span className="text-2xl font-bold text-stone-600">Description:</span> {description}
                     </p>      
                 </div>
             </div>

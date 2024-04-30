@@ -36,7 +36,7 @@ const AddCountry = () => {
     return (
         <div className="p-5 md:p-16 shadow-2xl">
 
-            <h1 className="text-2xl md:text-5xl font-extrabold mb-5 text-center">Add a Country</h1>
+            <h1 className="text-2xl md:text-5xl p-3 bg-slate-200  font-extrabold mb-5 text-center">Add a Country</h1>
             
             <form onSubmit={handleSubmit(onSubmit)}>
                 {/* Country name row */}
