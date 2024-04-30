@@ -22,7 +22,6 @@ const SpecificCountry = () => {
     // console.log(spots);
 
     return (
-        
         <div className="mt-5">
             <Helmet>
                 <title>Specific Country Spots List</title>
