@@ -47,7 +47,6 @@ const SignInPage = () => {
 
     return (
         <div className="min-h-screen mt-1 bg-[url('https://i.postimg.cc/RZfqJkDy/1213.jpg')] bg-no-repeat bg-cover">
-            
             <Helmet>
                 <title>Explore Southeast Asia | Sign In</title>
             </Helmet>
