@@ -26,16 +26,16 @@ const ViewSpotDetailsPage = () => {
                     <img className="h-full" src={photo} alt="Tourist spot photo" />
                 </div>
                 <div className="p-5 space-y-4">
-                    <h2 className="text-lg font-extralight">Location: <span className="text-2xl font-bold">{location}</span></h2>
-                    <h3 className="text-lg font-extralight">Country: <span className="text-4xl font-bold">{country}</span></h3>
+                    <h2 className="text-2xl font-extralight">Location: <span className="text-2xl font-bold">{location}</span></h2>
+                    <h3 className="text-2xl font-extralight">Country: <span className="text-4xl font-bold">{country}</span></h3>
                     <div className="md:flex md:justify-between">
                         <div className="">
-                            <h4 className="text-lg font-extralight">Average Cost(per person): <span className="text-2xl font-bold">${cost}</span></h4>
-                            <p className="text-lg font-extralight mt-5">Seasonality: <span className="text-2xl font-bold">{seasonality}</span> </p>
+                            <h4 className="text-2xl font-extralight">Average Cost(per person): <span className="text-2xl font-bold">${cost}</span></h4>
+                            <p className="text-2xl font-extralight mt-5">Seasonality: <span className="text-2xl font-bold">{seasonality}</span> </p>
                         </div>
                         <div className="">
-                            <h4 className="text-lg font-extralight mt-5 md:mt-0">Time: <span className="text-2xl font-bold"> {time}</span></h4>
-                            <p className="text-lg font-extralight mt-5">Average Visitors (Per Year): <span className="text-2xl font-bold">{visitors}</span></p>
+                            <h4 className="text-2xl font-extralight mt-5 md:mt-0">Time: <span className="text-2xl font-bold"> {time}</span></h4>
+                            <p className="text-2xl font-extralight mt-5">Average Visitors (Per Year): <span className="text-2xl font-bold">{visitors}</span></p>
                         </div>
                     </div>
                     <p className="text-justify">

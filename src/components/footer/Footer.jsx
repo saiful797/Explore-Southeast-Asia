@@ -40,8 +40,8 @@ const Footer = () => {
                 <nav className="mx-auto">
                     <h6 className="footer footer-title text-xl footer-center">Subscribe</h6> 
                     <div className="join ml-10 md:ml-0">
-                        <input className="input input-bordered join-item w-1/2 rounded-l-full " placeholder="Enter Email..."/>
-                        <button className=" btn join-item rounded-r-full bg-stone-600 text-white">
+                        <input className="input input-bordered join-item w-1/2 rounded-l-full text-black " placeholder="Enter Email..."/>
+                        <button className=" btn join-item rounded-r-full bg-stone-600">
                             Subscribe
                         </button>
                     </div>
