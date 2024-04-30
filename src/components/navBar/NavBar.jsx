@@ -107,7 +107,7 @@ const NavBar = () => {
 
                     <div className="dropdown dropdown-bottom dropdown-end dropdown-hover">
                         <div tabIndex={0}>
-                            <div className="w-12" data-tooltip-id="my-tooltip" data-tooltip-content={user?.displayName} data-tooltip-place="left">
+                            <div className="w-12 h-12" data-tooltip-id="my-tooltip" data-tooltip-content={user?.displayName} data-tooltip-place="left">
                                 
                                 {user?.photoURL ?(
                                     <img className="rounded-full" src={user.photoURL} alt="User profile"/>
