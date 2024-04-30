@@ -28,7 +28,7 @@ const AllTouristsSpotPage = () => {
 
             <div className="flex justify-center items-center">
                 <div className="dropdown dropdown-bottom">
-                <div tabIndex={0} role="button" className="btn btn-outline btn-sm btn-info">SORT BY <span className="text-lg"><IoIosArrowDown /></span></div>
+                <div tabIndex={0} role="button" className="btn btn-outline btn-sm">SORT BY <span className="text-lg"><IoIosArrowDown /></span></div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                         <li onClick={handleSortButton} className="text-lg font-medium"><a>Cost</a></li>
                     </ul>

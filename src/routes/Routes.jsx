@@ -11,6 +11,7 @@ import MyListPage from "../pages/MyListPage";
 import AddCountry from "../pages/AddCountry";
 import ViewSpotDetailsPage from "../pages/ViewSpotDetailsPage";
 import ProtectedRoute from "../protectedRoute/ProtectedRoute";
+import SpecificCountry from "../pages/SpecificCountry";
 
 
 const router = createBrowserRouter([
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
                     </ProtectedRoute>
                 ),
                 loader: ({params}) => fetch(`https://explore-southeast-aisa-server.vercel.app/touristSpot/${params.id}`)
+            },
+            {
+                path:'/specificCountry/:country',
+                element: <SpecificCountry />
             }
         ]
     }

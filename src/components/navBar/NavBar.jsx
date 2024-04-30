@@ -28,12 +28,12 @@ const NavBar = () => {
     // console.log(user);
 
     const navLinks=<>
-        <li className="md:hover:text-red-600 font-extrabold"><NavLink to="/">Home </NavLink></li>
-        <li className="md:hover:text-red-600 font-medium"><NavLink to="/all/tourists/spot">All Tourists Spot</NavLink></li>
-        {user?<li className="md:hover:text-red-600 font-medium"><NavLink to="/add/tourists/spot">Add Tourists Spot </NavLink></li> : ''}
-        {user?<li className="md:hover:text-red-600 font-medium"><NavLink to="/myList">My List</NavLink></li> : ''}
-        {user?<li className="md:hover:text-red-600 font-medium"><NavLink to="/add/country">Add Country</NavLink></li> : ''}
-        <li className="md:hover:text-red-600 font-medium"><NavLink to="/about">About Us</NavLink></li>  
+        <li className="md:hover:text-emerald-600 font-extrabold"><NavLink to="/">Home </NavLink></li>
+        <li className="md:hover:text-emerald-600 font-medium"><NavLink to="/all/tourists/spot">All Tourists Spot</NavLink></li>
+        {user?<li className="md:hover:text-emerald-600 font-medium"><NavLink to="/add/tourists/spot">Add Tourists Spot </NavLink></li> : ''}
+        {user?<li className="md:hover:text-emerald-600 font-medium"><NavLink to="/myList">My List</NavLink></li> : ''}
+        {user?<li className="md:hover:text-emerald-600 font-medium"><NavLink to="/add/country">Add Country</NavLink></li> : ''}
+        <li className="md:hover:text-emerald-600 font-medium"><NavLink to="/about">About Us</NavLink></li>  
         {
             user? '' : <div>
             <li className="md:hidden"><NavLink to="/login">Sign in</NavLink></li>
@@ -57,7 +57,7 @@ const NavBar = () => {
 
 
     return (
-    <div className="navbar bg-blue-950 p-3">
+    <div className="navbar bg-blue-950 hover:bg-stone-600 p-3">
         <div className="navbar-start">
             <div className="dropdown">
                 <div tabIndex={0} role="button" className="btn btn-outline btn-sm text-white lg:hidden">
