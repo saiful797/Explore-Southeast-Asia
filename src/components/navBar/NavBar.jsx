@@ -25,9 +25,8 @@ const NavBar = () => {
         const localTheme = localStorage.getItem("theme");
         document.querySelector("html").setAttribute('data-theme', localTheme)
     },[theme]);
-
     // console.log(user);
-
+    
     const navLinks=<>
         <li className="md:hover:text-orange-600 font-extrabold"><NavLink to="/">Home </NavLink></li>
         <li className="md:hover:text-orange-600 font-medium"><NavLink to="/all/tourists/spot">All Tourists Spot</NavLink></li>
@@ -55,7 +54,6 @@ const NavBar = () => {
         logout();
         location.reload();
     }
-
 
     return (
     <div className="navbar bg-stone-600 p-3">
