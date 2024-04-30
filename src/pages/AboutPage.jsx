@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 const AboutPage = () => {
     
     return (
-        <div className="p-5 mt-10 shadow-xl text-justify">
+        <div className="p-10 mt-10 shadow-xl text-justify">
             <Helmet>
                 <title>About Us</title>
             </Helmet>
