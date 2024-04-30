@@ -11,7 +11,7 @@ const Footer = () => {
                     <div className="ml-16 md:ml-0 text-white mt-10">
                         <Link to='/' className="text-4xl font-bold flex">
                             <div className="relative">
-                                <h1 className="font-Tangerine">Explore<span className="text-amber-600">Southeast</span>Asia</h1> 
+                                <h1 className="font-Tangerine">Explore<span className="text-amber-500">Southeast</span>Asia</h1> 
                                 <p className="text-xs font-extrabold absolute top-7 right-0 text-white">Best Tourism</p>
                             </div>
                         </Link>

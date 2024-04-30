@@ -57,7 +57,7 @@ const NavBar = () => {
 
 
     return (
-    <div className="navbar bg-gray-400 p-3">
+    <div className="navbar bg-blue-950 p-3">
         <div className="navbar-start">
             <div className="dropdown">
                 <div tabIndex={0} role="button" className="btn btn-outline btn-sm text-white lg:hidden">
@@ -72,7 +72,7 @@ const NavBar = () => {
             <div className="ml-3 lg:ml-0 text-white">
                 <Link to='/' className="text-2xl md:text-4xl font-bold flex">
                     <div className="relative">
-                        <h1 className="font-Tangerine">Explore<span className="text-amber-600">Southeast</span>Asia</h1> 
+                        <h1 className="font-Tangerine">Explore<span className="text-amber-500">Southeast</span>Asia</h1> 
                         <p className="text-xs font-extrabold absolute top-7 right-0 text-white">Best Tourism</p>
                     </div>
                 </Link>
