@@ -19,7 +19,7 @@ const ReviewSlider = () => {
         >
             <SwiperSlide>
                 
-                <div className="card-body card-compact bg-amber-100 w-full ">
+                <div className="card-body card-compact bg-lime-100 w-full ">
                     <div className='mx-auto'>
                         <figure><img className='w-20 h-20 rounded-full' src="https://i.postimg.cc/bJfBjqLy/profile-1.jpg" alt="spot" /></figure>
                     </div>
@@ -39,7 +39,7 @@ const ReviewSlider = () => {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="card-body card-compact bg-amber-100 w-full">
+                <div className="card-body card-compact bg-lime-100 w-full">
                     <div className='mx-auto'>
                         <figure><img className='w-20 h-20 rounded-full' src="https://i.postimg.cc/wT44jXFb/profile-2.jpg" alt="spot" /></figure>
                     </div>
@@ -59,7 +59,7 @@ const ReviewSlider = () => {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="card-body card-compact bg-amber-100 w-ful">
+                <div className="card-body card-compact bg-lime-100 w-ful">
                     <div className='mx-auto'>
                         <figure><img className='w-20 h-20 rounded-full' src="https://i.postimg.cc/76PSzcZ1/profile-3.jpg" alt="spot" /></figure>
                     </div>
@@ -79,7 +79,7 @@ const ReviewSlider = () => {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="card-body card-compact bg-amber-100">
+                <div className="card-body card-compact bg-lime-100">
                     <div className='mx-auto'>
                         <figure><img className='w-20 h-20 rounded-full' src="https://i.postimg.cc/NML5Bw0n/profile-4.jpg" alt="spot" /></figure>
                     </div>
