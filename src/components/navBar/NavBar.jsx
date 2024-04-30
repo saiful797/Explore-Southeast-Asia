@@ -8,6 +8,7 @@ import { Tooltip } from "react-tooltip";
 const NavBar = () => {
     const {user, logout} = useContext(AuthContext);
 
+    // Toggle 'Dark' and 'Light' theme
     const [theme, setTheme] = useState(localStorage.getItem("theme")? localStorage.getItem("theme") : "light");
 
     const handleToggle = (e) =>{
