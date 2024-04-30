@@ -13,7 +13,6 @@ import ViewSpotDetailsPage from "../pages/ViewSpotDetailsPage";
 import ProtectedRoute from "../protectedRoute/ProtectedRoute";
 import SpecificCountry from "../pages/SpecificCountry";
 
-
 const router = createBrowserRouter([
     {
         path: '/',
@@ -83,5 +82,6 @@ const router = createBrowserRouter([
         ]
     }
 ])
+
 
 export default router;
