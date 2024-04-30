@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet-async';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from "react-toastify";
@@ -44,9 +45,12 @@ const UpdateTouristSpotPage = ({id}) => {
 
     return (
         <div className="p-5 md:p-16 shadow-xl">
+            <Helmet>
+                <title>Update Tourist Spot Modal</title>
+            </Helmet>
+
             <h1 className="text-2xl md:text-5xl font-extrabold mb-5 text-center">Update a Tourist Spot</h1>
             
-
             <form onSubmit={handleSubmit(onSubmit)}>
                 {/* form spot name and location row */}
                 <div className="md:flex gap-5 md:mb-8">

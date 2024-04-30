@@ -1,5 +1,6 @@
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
+import { Helmet } from "react-helmet-async";
 
 
 const AddCountry = () => {
@@ -10,8 +11,7 @@ const AddCountry = () => {
 
         console.log(newCountry);
 
-        fetch('https://explore-southeast-aisa-server-76sk981xb.vercel.app/addCountry', {
-            mode: 'no-cors',
+        fetch('https://explore-southeast-aisa-server.vercel.app/addCountry', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json',
@@ -35,6 +35,10 @@ const AddCountry = () => {
 
     return (
         <div className="p-5 md:p-16 shadow-2xl">
+
+            <Helmet>
+                <title>Add Country</title>
+            </Helmet>
 
             <h1 className="text-2xl md:text-5xl p-3 bg-slate-200  font-extrabold mb-5 text-center">Add a Country</h1>
             

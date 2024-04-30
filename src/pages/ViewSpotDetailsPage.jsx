@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
 
 const ViewSpotDetailsPage = () => {
@@ -15,6 +16,10 @@ const ViewSpotDetailsPage = () => {
 
     return (
         <div className="mt-10">
+
+            <Helmet>
+                <title>View Spot Details Page</title>
+            </Helmet>      
             <h1 className="text-center text-5xl font-extrabold "><span className="text-5xl font-extralight">Tourist Spot: </span>{spot}</h1>
             <div className="mt-10  grid lg:grid-cols-2 shadow-lg shadow-black">
                 <div className="w-full">

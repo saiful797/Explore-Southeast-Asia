@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import AllTouristSpotCard from "../components/AllTouristSpotCard/AllTouristSpotCard";
 import { IoIosArrowDown } from "react-icons/io";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const AllTouristsSpotPage = () => {
 
@@ -20,6 +21,11 @@ const AllTouristsSpotPage = () => {
 
     return (
         <div className="mt-10 min-h-screen">
+
+            <Helmet>
+                <title>All Tourist Spot Page</title>
+            </Helmet>
+
             <div className="flex justify-center items-center">
                 <div className="dropdown dropdown-bottom">
                 <div tabIndex={0} role="button" className="btn btn-outline btn-sm btn-info">SORT BY <span className="text-lg"><IoIosArrowDown /></span></div>

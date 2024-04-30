@@ -4,6 +4,7 @@ import { MdDeleteForever } from "react-icons/md";
 import { AiOutlineEdit } from "react-icons/ai";
 import Swal from "sweetalert2";
 import UpdateTouristSpotPage from "../components/UpdateTouristSpotModal/UpdateTouristSpotPage";
+import { Helmet } from "react-helmet-async";
 
 const MyListPage = () => {
     const {user} = useContext(AuthContext);
@@ -58,6 +59,9 @@ const MyListPage = () => {
 
     return (
         <div className="mx-auto mt-5 min-h-screen">
+            <Helmet>
+                <title>My Spot List</title>
+            </Helmet>
             <table className="table border  border-collapse border-slate-400">
                 <thead className="text-base">
                     <th className="border border-slate-300">ID</th>

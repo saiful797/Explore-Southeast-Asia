@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/firebaseProvider/FirebaseProvider";
 import Swal from "sweetalert2";
 import SignInWithSocialMedia from "../components/SignInWithSocialMedia/SignInWithSocialMedia";
+import { Helmet } from "react-helmet-async";
 
 
 const SignInPage = () => {
@@ -46,6 +47,10 @@ const SignInPage = () => {
 
     return (
         <div className="min-h-screen mt-1 bg-[url('https://i.postimg.cc/RZfqJkDy/1213.jpg')] bg-no-repeat bg-cover">
+            
+            <Helmet>
+                <title>Explore Southeast Asia | Sign In</title>
+            </Helmet>
             <div className="hero-content flex-col">
                 <div className="text-center md:mb-2">
                     <h1 className="text-5xl mt-5 font-bold text-white">Sign In now!</h1>

@@ -5,6 +5,7 @@ import SliderSwiper from "../components/sliderSwiper/SliderSwiper";
 import AllTouristSpotCard from "../components/AllTouristSpotCard/AllTouristSpotCard";
 import ReviewSlider from "../components/reviewSlider/ReviewSlider";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
+import { Helmet } from "react-helmet-async";
 
 
 const HomePage = () => {
@@ -20,6 +21,9 @@ const HomePage = () => {
 
     return (
         <div className="mt-6">
+            <Helmet>
+                <title>Explore southeast Asia | Home</title>
+            </Helmet>
             <div className="flex justify-center items-center">
                 <div className="text-sm md:text-xl font-medium font-Robot md:font-bold">
                     <span className="text-red-600">Welcome</span> !!{' '}

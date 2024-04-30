@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useForm} from "react-hook-form"
 import Swal from "sweetalert2";
 import { AuthContext } from "../Context/firebaseProvider/FirebaseProvider";
+import { Helmet } from "react-helmet-async";
 
 const AddTourismSpotPage = () => {
 
@@ -40,6 +41,9 @@ const AddTourismSpotPage = () => {
    
     return (
         <div className="p-5 md:p-12 shadow-2xl">
+            <Helmet>
+                <title>Add Tourist Spot</title>
+            </Helmet>
 
             <h1 className="text-2xl md:text-5xl p-3 bg-slate-200  font-extrabold mb-5 text-center">Add a Tourist Spot</h1>
             
