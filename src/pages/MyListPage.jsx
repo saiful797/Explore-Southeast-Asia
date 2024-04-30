@@ -51,7 +51,6 @@ const MyListPage = () => {
                         location.reload()
                     }
                     // console.log(data);
-                    // location.reload()
                 })
             }
         });
