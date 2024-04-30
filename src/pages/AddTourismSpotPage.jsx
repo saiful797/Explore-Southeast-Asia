@@ -8,7 +8,6 @@ const AddTourismSpotPage = () => {
 
     const {user} = useContext(AuthContext);
     // console.log(user);
-
     const {register ,reset , handleSubmit} = useForm();
 
     const onSubmit = (touristSpotData) => {
@@ -16,7 +15,6 @@ const AddTourismSpotPage = () => {
         const newTouristSpotData = {...touristSpotData, userEmail};
 
         // console.log(newTouristSpotData);
-
         fetch('https://explore-southeast-aisa-server.vercel.app/touristSpot', {
             method: 'POST',
             headers: {
@@ -34,8 +32,7 @@ const AddTourismSpotPage = () => {
                     confirmButtonText: 'OK',
                 })
                 reset();
-            }
-            
+            }  
         })
     }
    
