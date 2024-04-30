@@ -7,7 +7,6 @@ import { Helmet } from "react-helmet-async";
 const AllTouristsSpotPage = () => {
 
     const allTouristsSpot = useLoaderData();
-
     const [sortedSpot, setSortedSpot] = useState(allTouristsSpot)
 
     const handleSortButton = () =>{
@@ -16,7 +15,7 @@ const AllTouristsSpotPage = () => {
           .then(data => {
             // console.log(data);
             setSortedSpot(data);
-          })
+        })
     }
 
     return (
