@@ -35,8 +35,8 @@ const HomePage = () => {
                 <SliderSwiper />
             </div>
             <div className="mt-10">
-                <div className="bg-black p-3 mb-10">
-                    <h1 className="text-4xl font-extrabold text-center text-white">Tourists Spots</h1>
+                <div className="bg-zinc-200 p-3 mb-10 shadow-md shadow-slate-500">
+                    <h1 className="text-2xl md:text-4xl font-extrabold text-center text-stone-500">Tourists Spots</h1>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 place-items-center gap-5">
                     {
@@ -46,22 +46,22 @@ const HomePage = () => {
             </div>
 
             <div className="mt-10">
-                <div className="bg-black p-3 mb-10">
-                    <h1 className="text-4xl font-extrabold text-center text-white">Countries </h1>
+                <div className="bg-zinc-200 p-3 mb-10 shadow-md shadow-slate-500">
+                    <h1 className="text-2xl md:text-4xl font-extrabold text-center text-stone-500">Countries </h1>
                 </div>
                 <div className="">
                     <CountriesCard />
                 </div>
                 <div className="mt-20">
-                    <div className="bg-black p-3 mb-10 shadow-transparent">
-                        <h1 className="text-4xl font-extrabold text-center text-white">Customer's Reviews</h1>
+                    <div className="bg-zinc-200 p-3 mb-10 shadow-md shadow-slate-500">
+                        <h1 className="text-2xl md:text-4xl font-extrabold text-center text-stone-500">Customer's Reviews</h1>
                     </div>
                     <ReviewSlider />
                 </div>
 
                 <div className="mt-10 text-center">
-                    <div className="bg-black p-3 mb-10">
-                        <h1 className="text-4xl font-extrabold text-center text-white">FAQ</h1>
+                    <div className="bg-zinc-200 p-3 mb-10 shadow-md shadow-slate-500">
+                        <h1 className="text-2xl md:text-4xl font-extrabold text-center text-stone-500">FAQ</h1>
                     </div>
 
                     <FAQ />

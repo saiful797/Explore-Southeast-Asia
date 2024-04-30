@@ -25,9 +25,29 @@ const ReviewSlider = () => {
         >
             <SwiperSlide>
                 
-                <div className="card-body card-compact w-full bg-black text-white">
+                <div className="card-body card-compact bg-amber-100 w-full ">
                     <div className='mx-auto'>
-                        <figure><img className='w-20 rounded-full' src="https://i.ibb.co/Jq10C13/user.png" alt="spot" /></figure>
+                        <figure><img className='w-20 h-20 rounded-full' src="https://i.postimg.cc/bJfBjqLy/profile-1.jpg" alt="spot" /></figure>
+                    </div>
+                    <div className="space-y-3 mx-auto">
+                        <h2 className="card-title">Adam Smith</h2>
+                        <p>
+                            <strong>Review: </strong>The product works as described, but it didn't quite meet my expectations. It's just okay.
+                        </p>
+                        <div className="rating">
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-slate-400" checked/>
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-slate-400"/>
+                        </div>
+                    </div>
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div className="card-body card-compact bg-amber-100 w-full">
+                    <div className='mx-auto'>
+                        <figure><img className='w-20 h-20 rounded-full' src="https://i.postimg.cc/wT44jXFb/profile-2.jpg" alt="spot" /></figure>
                     </div>
                     <div className="space-y-3 mx-auto">
                         <h2 className="card-title">Adam Smith</h2>
@@ -39,15 +59,15 @@ const ReviewSlider = () => {
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked/>
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-white"/>
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-slate-400"/>
                         </div>
                     </div>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="card-body card-compact w-full bg-black text-white text-white">
+                <div className="card-body card-compact bg-amber-100 w-ful">
                     <div className='mx-auto'>
-                        <figure><img className='w-20 rounded-full' src="https://i.ibb.co/Jq10C13/user.png" alt="spot" /></figure>
+                        <figure><img className='w-20 h-20 rounded-full' src="https://i.postimg.cc/76PSzcZ1/profile-3.jpg" alt="spot" /></figure>
                     </div>
                     <div className="space-y-3 mx-auto">
                         <h2 className="card-title">Adam Smith</h2>
@@ -59,35 +79,15 @@ const ReviewSlider = () => {
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked/>
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-white"/>
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-slate-400"/>
                         </div>
                     </div>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="card-body card-compact w-full bg-black text-white text-white">
+                <div className="card-body card-compact bg-amber-100">
                     <div className='mx-auto'>
-                        <figure><img className='w-20 rounded-full' src="https://i.ibb.co/Jq10C13/user.png" alt="spot" /></figure>
-                    </div>
-                    <div className="space-y-3 mx-auto">
-                        <h2 className="card-title">Adam Smith</h2>
-                        <p>
-                            <strong>Review: </strong>The product works as described, but it didn't quite meet my expectations. It's just okay.
-                        </p>
-                        <div className="rating">
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked/>
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-white"/>
-                        </div>
-                    </div>
-                </div>
-            </SwiperSlide>
-            <SwiperSlide>
-                <div className="card-body card-compact w-full bg-black text-white text-white">
-                    <div className='mx-auto'>
-                        <figure><img className='w-20 rounded-full' src="https://i.ibb.co/Jq10C13/user.png" alt="spot" /></figure>
+                        <figure><img className='w-20 h-20 rounded-full' src="https://i.postimg.cc/NML5Bw0n/profile-4.jpg" alt="spot" /></figure>
                     </div>
                     <div className="space-y-3 mx-auto">
                         <h2 className="card-title">Adam Smith</h2>
@@ -99,7 +99,7 @@ const ReviewSlider = () => {
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400"/>
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-white"/>
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400"/>
                         </div>
                     </div>
                 </div>
