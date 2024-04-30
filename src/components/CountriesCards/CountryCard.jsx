@@ -6,7 +6,6 @@ const CountryCard = ({country}) => {
     const {description, name, photo} = country;
     
     return (
-        
        <Link to={`/specificCountry/${name}`}>
             <button>
                 <div className="card shadow-2xl w-[345px] h-[580px] bg-zinc-800 text-white">

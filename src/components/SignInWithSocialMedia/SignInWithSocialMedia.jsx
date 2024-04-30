@@ -6,11 +6,8 @@ import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa6";
 
 const SignInWithSocialMedia = () => {
-
     const {googleLogin, githubLogin} = useContext(AuthContext);
-
     const navigate = useNavigate();
-
     const handleSocialMediaLogin = (socialMediaProvider) =>{
 
         socialMediaProvider().then(result =>{
@@ -21,11 +18,9 @@ const SignInWithSocialMedia = () => {
                     icon: 'success',
                     confirmButtonText: 'OK',
                 })
-                
                 navigate(location?.state || '/');
             }
         })
-
     }
 
     return (

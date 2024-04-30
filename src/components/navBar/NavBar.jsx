@@ -10,7 +10,6 @@ const NavBar = () => {
 
     // Toggle 'Dark' and 'Light' theme
     const [theme, setTheme] = useState(localStorage.getItem("theme")? localStorage.getItem("theme") : "light");
-
     const handleToggle = (e) =>{
         if(e.target.checked){
             setTheme("dark");
@@ -19,7 +18,6 @@ const NavBar = () => {
             setTheme('light');
         }
     }
-
     useEffect(() => {
         localStorage.setItem("theme", theme);
         const localTheme = localStorage.getItem("theme");

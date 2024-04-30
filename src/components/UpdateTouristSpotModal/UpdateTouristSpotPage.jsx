@@ -68,7 +68,7 @@ const UpdateTouristSpotPage = ({id}) => {
                     </div>
                 </div>
 
-                {/* form spot name and location row */}
+                {/* form country name and seasonality row */}
                 <div className="md:flex gap-5 md:mb-8">
                     <div className="form-control md:w-1/2 mb-5 md:mb-0">
                         <label className="label">
@@ -84,7 +84,7 @@ const UpdateTouristSpotPage = ({id}) => {
                     </div>
                 </div>
 
-                {/* form Seasonality and Average Cost row */}
+                {/* form Travel Time and Average Cost row */}
                 <div className="md:flex gap-5 md:mb-8">
                 <div className="form-control md:w-1/2 mb-5 md:mb-0">
                         <label className="label">

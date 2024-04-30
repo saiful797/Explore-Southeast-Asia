@@ -9,7 +9,6 @@ export default {
       backgroundImage:{
         'tourism1': "url('https://i.postimg.cc/ydkVkz3R/tourism-1.jpg')"
       },
-
       fontFamily:{
         DancingScript:['Dancing Script','cursive'],
         Tangerine:['Tangerine','cursive'],
@@ -19,7 +18,6 @@ export default {
   },
   
   plugins: [require("daisyui")],
-
   daisyui: {
 
     themes: [ "light", "dark",],

@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import { Link} from 'react-router-dom';
 
-
 const AllTouristSpotCard = ({touristSpot}) => {
     const {_id, photo, cost, seasonality, spot, time} = touristSpot;
 
@@ -15,7 +14,6 @@ const AllTouristSpotCard = ({touristSpot}) => {
                     <p>travel time: <span className='font-bold'>{time}</span></p>
                     <p>Seasonality: <span className='font-bold'>{seasonality}</span></p>
                 </div>
-                
                 <div className='mt-10 flex justify-center items-center w-full'>
                     <Link to={`/viewDetails/${_id}`} className='w-full'>  
                         <button className="btn btn-sm btn-outline  w-full">View Details</button> 

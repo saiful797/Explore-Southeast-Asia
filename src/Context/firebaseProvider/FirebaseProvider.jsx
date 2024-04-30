@@ -6,11 +6,9 @@ import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 
 // Context
 export const AuthContext = createContext(null);
-
 // Social auth provider
 const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider(); 
-
 
 const FirebaseProvider = ({children}) => {
 
@@ -33,6 +31,7 @@ const FirebaseProvider = ({children}) => {
     }
 
     // Login Process
+
     // User sign in (Log in with email and password)
     const singInUser = (email, password) =>{
         setLoading(true);

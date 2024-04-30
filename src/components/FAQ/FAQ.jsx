@@ -46,7 +46,6 @@ const data =[
 
 const FAQ = () => {
     const [activeIndex, setActiveIndex] = useState(null);
-
     const toggleFAQ = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
     };

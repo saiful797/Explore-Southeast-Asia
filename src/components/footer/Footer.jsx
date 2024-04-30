@@ -4,6 +4,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+    
     return (
         <footer className="p-5 text-center mt-10 bg-black text-white">
             <div className="footer max-w-6xl grid  place-content-center md:place-content-between	">

@@ -14,7 +14,7 @@ const ErrorPage = () => {
                 </Link>
             </div>
             <div className="w-1/2">
-                <img src="https://i.ibb.co/2Z9pSVL/404.png" alt="" />
+                <img src="https://i.ibb.co/2Z9pSVL/404.png" alt="error image" />
             </div>
         </div>
     );
