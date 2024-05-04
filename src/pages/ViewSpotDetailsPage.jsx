@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
+import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
 const ViewSpotDetailsPage = () => {
 
@@ -40,6 +41,7 @@ const ViewSpotDetailsPage = () => {
                     </p>      
                 </div>
             </div>
+            <ScrollToTop />
         </div>
     );
 };

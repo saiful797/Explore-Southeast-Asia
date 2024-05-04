@@ -3,6 +3,7 @@ import { useForm} from "react-hook-form"
 import Swal from "sweetalert2";
 import { AuthContext } from "../Context/firebaseProvider/FirebaseProvider";
 import { Helmet } from "react-helmet-async";
+import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
 const AddTourismSpotPage = () => {
 
@@ -139,6 +140,7 @@ const AddTourismSpotPage = () => {
 
                 <input type="submit" value="ADD SPOT" className="btn w-full bg-black text-white" />
             </form>
+            <ScrollToTop />
         </div>
     );
 };

@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context/firebaseProvider/FirebaseProvider";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
+import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
 const SignUpPage = () => {
 
@@ -114,8 +115,8 @@ const SignUpPage = () => {
                         </div>
                     </form>
                 </div>
-                
             </div>
+            <ScrollToTop />
         </div>
     );
 };

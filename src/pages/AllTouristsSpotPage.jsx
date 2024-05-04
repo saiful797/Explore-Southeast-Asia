@@ -3,6 +3,7 @@ import AllTouristSpotCard from "../components/AllTouristSpotCard/AllTouristSpotC
 import { IoIosArrowDown } from "react-icons/io";
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
+import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
 const AllTouristsSpotPage = () => {
 
@@ -38,6 +39,7 @@ const AllTouristsSpotPage = () => {
                     sortedSpot.map(touristSpot => <AllTouristSpotCard key={touristSpot._id} touristSpot={touristSpot} />)
                 }
             </div>
+            <ScrollToTop />
         </div>
     );
 };

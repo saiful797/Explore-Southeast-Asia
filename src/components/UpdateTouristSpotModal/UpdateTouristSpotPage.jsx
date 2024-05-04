@@ -1,19 +1,41 @@
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet-async';
-import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import ScrollToTop from '../scrollToTop/ScrollToTop';
+import { useEffect, useState } from 'react';
 
 const UpdateTouristSpotPage = ({id}) => {
 
-    const {register, reset , handleSubmit} = useForm();
     const navigate = useNavigate();
+    const [specificSpot, setSpecificSpot] = useState([]);
+    useEffect(() => {
+        fetch(`https://explore-southeast-aisa-server.vercel.app/singleSpot/${id}`)
+        .then(res => res.json())
+        .then(data => {
+            setSpecificSpot(data);
+        })
+    },[id]);
 
-    const onSubmit = (data) => {
-        // console.log("id:",id, "Updated Data:",data);
-        // const updatedSpot = data;
-        // console.log(updateSpot);
+    const {spot, location, country, seasonality, time, cost, visitors, photo, description} = specificSpot;
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const form = e.target;
+
+        const spot = form.spot.value;
+        const location = form.location.value;
+        const country = form.country.value;
+        const seasonality = form.seasonality.value;
+        const time = form.time.value;
+        const cost = form.cost.value;
+        const visitors = form.visitors.value;
+        const photo = form.photo.value;
+        const description = form.description.value;
+
+        const data ={spot, location, country, seasonality, time, cost, visitors, photo,description}
+
 
         fetch(`https://explore-southeast-aisa-server.vercel.app/updateSpot/${id}`,{
             method: 'PUT',
@@ -37,8 +59,6 @@ const UpdateTouristSpotPage = ({id}) => {
                 });
 
                 navigate(location?.pathname || '/myList')
-
-                reset();
             }
           })
     }
@@ -51,20 +71,20 @@ const UpdateTouristSpotPage = ({id}) => {
 
             <h1 className="text-2xl md:text-5xl font-extrabold mb-5 text-center">Update a Tourist Spot</h1>
             
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit}>
                 {/* form spot name and location row */}
                 <div className="md:flex gap-5 md:mb-8">
                     <div className="form-control md:w-1/2 mb-5 md:mb-0">
                         <label className="label">
                             <span className="label-text text-lg font-medium">Spot Name</span>
                         </label>
-                        <input type="text" name="spot" placeholder="Enter Tourists Spot Name..." className="input input-bordered" {...register("spot")} required />
+                        <input type="text" name="spot" defaultValue={spot} placeholder="Enter Tourists Spot Name..." className="input input-bordered" required />
                     </div>
                     <div className="form-control md:w-1/2 mb-5 md:mb-0">
                         <label className="label">
                             <span className="label-text text-lg font-medium">Spot Location</span>
                         </label>
-                        <input type="text" name="location" placeholder="Enter Spot Location..." className="input input-bordered" {...register("location")} required />
+                        <input type="text" name="location" defaultValue={location} placeholder="Enter Spot Location..." className="input input-bordered" required />
                     </div>
                 </div>
 
@@ -74,13 +94,13 @@ const UpdateTouristSpotPage = ({id}) => {
                         <label className="label">
                             <span className="label-text text-lg font-medium">Country Name:</span>
                         </label>
-                        <input type="text" name="country" placeholder="Enter Country Name..." className="input input-bordered" {...register("country")} required />
+                        <input type="text" name="country"  defaultValue={country} placeholder="Enter Country Name..." className="input input-bordered" required />
                     </div>
                     <div className="form-control md:w-1/2 mb-5 md:mb-0">
                         <label className="label">
                             <span className="label-text text-lg font-medium">Seasonality</span>
                         </label>
-                        <input type="text" name="seasonality" placeholder="Enter Season Name(ex. summer)..." className="input input-bordered" {...register("seasonality")} required />
+                        <input type="text" name="seasonality" defaultValue={seasonality} placeholder="Enter Season Name(ex. summer)..." className="input input-bordered" required />
                     </div>
                 </div>
 
@@ -90,13 +110,13 @@ const UpdateTouristSpotPage = ({id}) => {
                         <label className="label">
                             <span className="label-text text-lg font-medium">Travel Time</span>
                         </label>
-                        <input type="text" name="time"  placeholder="Enter Travel Time(ex. 7 days)..." className="input input-bordered" {...register("time")} required />
+                        <input type="text" name="time" defaultValue={time}  placeholder="Enter Travel Time(ex. 7 days)..." className="input input-bordered" required />
                     </div>
                     <div className="form-control md:w-1/2 mb-5 md:mb-0">
                         <label className="label">
                             <span className="label-text text-lg font-medium">Average Cost</span>
                         </label>
-                        <input type="number" name="cost"  placeholder="Enter Average Cost $(US Dollar)..." className="input input-bordered" {...register("cost")} required />
+                        <input type="number" name="cost" defaultValue={cost}  placeholder="Enter Average Cost $(US Dollar)..." className="input input-bordered" required />
                     </div>
                 </div>
 
@@ -106,13 +126,13 @@ const UpdateTouristSpotPage = ({id}) => {
                         <label className="label">
                             <span className="label-text text-lg font-medium">Total Visitors Per Year</span>
                         </label>
-                        <input type="text" name="visitors" placeholder="Enter total Visitors Per Year.." className="input input-bordered" {...register("visitors")} required />
+                        <input type="text" name="visitors" defaultValue={visitors} placeholder="Enter total Visitors Per Year.." className="input input-bordered" required />
                     </div>
                     <div className="form-control md:w-1/2 mb-5 md:mb-0">
                         <label className="label">
                             <span className="label-text text-lg font-medium">Spot Photo URL</span>
                         </label>
-                        <input type="url" name="photo" placeholder="Enter Tourist Spot Photo URL..." className="input input-bordered" {...register("photo")} required />
+                        <input type="url" name="photo" defaultValue={photo} placeholder="Enter Tourist Spot Photo URL..." className="input input-bordered" required />
                     </div>
 
                 </div>
@@ -122,12 +142,13 @@ const UpdateTouristSpotPage = ({id}) => {
                     <label className="label">
                         <span className="label-text text-lg font-medium">Short Description</span>
                     </label>
-                    <textarea name='description' placeholder="Enter Spot Short Description..." className="textarea textarea-bordered textarea-lg w-full"  {...register("description")} required ></textarea>
+                    <textarea name='description' defaultValue={description} placeholder="Enter Spot Short Description..." className="textarea textarea-bordered textarea-lg w-full" required ></textarea>
                 </div>
 
                 <input type="submit" value="UPDATE SPOT" className="btn w-full bg-black text-white" />
             </form>
             <ToastContainer />
+            <ScrollToTop />
         </div>
     );
 };

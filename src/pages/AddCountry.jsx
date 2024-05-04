@@ -1,6 +1,7 @@
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
 import { Helmet } from "react-helmet-async";
+import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
 
 const AddCountry = () => {
@@ -9,7 +10,7 @@ const AddCountry = () => {
 
     const onSubmit = (newCountry) => {
 
-        console.log(newCountry);
+        // console.log(newCountry);
 
         fetch('https://explore-southeast-aisa-server.vercel.app/addCountry', {
             method: 'POST',
@@ -67,6 +68,7 @@ const AddCountry = () => {
 
                 <input type="submit" value="ADD COUNTRY" className="btn w-full bg-black text-white" />
             </form>
+            <ScrollToTop />
         </div>
     );
 };

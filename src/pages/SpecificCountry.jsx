@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import AllTouristSpotCard from "../components/AllTouristSpotCard/AllTouristSpotCard";
 import { Helmet } from "react-helmet-async";
+import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
 const SpecificCountry = () => {
     const data = useParams();
@@ -35,6 +36,7 @@ const SpecificCountry = () => {
                     spots.map(spot => <AllTouristSpotCard  key={spot._id} touristSpot={spot}/>)
                 }
             </div>
+            <ScrollToTop />
         </div>
     );
 };

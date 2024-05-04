@@ -6,6 +6,7 @@ import { AuthContext } from "../Context/firebaseProvider/FirebaseProvider";
 import Swal from "sweetalert2";
 import SignInWithSocialMedia from "../components/SignInWithSocialMedia/SignInWithSocialMedia";
 import { Helmet } from "react-helmet-async";
+import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
 
 const SignInPage = () => {
@@ -94,6 +95,7 @@ const SignInPage = () => {
                     </div>
                 </div>
             </div>
+            <ScrollToTop />
         </div>
     );
     

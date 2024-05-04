@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
 const AboutPage = () => {
     
@@ -41,6 +42,8 @@ const AboutPage = () => {
             <p>
                 With its rich tapestry of cultures, breathtaking landscapes, and unforgettable experiences, Southeast Asia is a destination like no other. Join us on an unforgettable journey as we explore the hidden gems and iconic landmarks of this magical region together.
             </p>
+
+            <ScrollToTop />
         </div>
     );
 };

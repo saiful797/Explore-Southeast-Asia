@@ -5,6 +5,7 @@ import { AiOutlineEdit } from "react-icons/ai";
 import Swal from "sweetalert2";
 import UpdateTouristSpotPage from "../components/UpdateTouristSpotModal/UpdateTouristSpotPage";
 import { Helmet } from "react-helmet-async";
+import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
 const MyListPage = () => {
     const {user} = useContext(AuthContext);
@@ -72,10 +73,10 @@ const MyListPage = () => {
 
                 <tbody>
                     {
-                        newMyList.map((list, i) => (
+                        newMyList.map((list, index) => (
                             
-                            <tr key={i} className="">
-                                <td className="border border-slate-300">{i+1}</td>
+                            <tr key={index} className="">
+                                <td className="border border-slate-300">{index+1}</td>
                                 <td className="border border-slate-300">{list.spot}</td>
                                 <td className="border border-slate-300">{list.country}</td>
                                 <td className="border border-slate-300">${list.cost}</td>
@@ -109,6 +110,7 @@ const MyListPage = () => {
                     }
                 </tbody>
             </table>
+            <ScrollToTop />
         </div>
     );
 };

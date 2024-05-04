@@ -6,6 +6,7 @@ import AllTouristSpotCard from "../components/AllTouristSpotCard/AllTouristSpotC
 import ReviewSlider from "../components/reviewSlider/ReviewSlider";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { Helmet } from "react-helmet-async";
+import ScrollToTop from "../components/scrollToTop/ScrollToTop";
 
 
 const HomePage = () => {
@@ -71,6 +72,7 @@ const HomePage = () => {
                     <FAQ />
                 </div>
             </div>
+            <ScrollToTop />
         </div>
     );
 };
