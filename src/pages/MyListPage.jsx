@@ -3,9 +3,9 @@ import { AuthContext } from "../Context/firebaseProvider/FirebaseProvider";
 import { MdDeleteForever } from "react-icons/md";
 import { AiOutlineEdit } from "react-icons/ai";
 import Swal from "sweetalert2";
-import UpdateTouristSpotPage from "../components/UpdateTouristSpotModal/UpdateTouristSpotPage";
 import { Helmet } from "react-helmet-async";
 import ScrollToTop from "../components/scrollToTop/ScrollToTop";
+import { Link } from "react-router-dom";
 
 const MyListPage = () => {
     const {user} = useContext(AuthContext);
@@ -80,28 +80,12 @@ const MyListPage = () => {
                                 <td className="border border-slate-300">{list.spot}</td>
                                 <td className="border border-slate-300">{list.country}</td>
                                 <td className="border border-slate-300">${list.cost}</td>
-
                                 <td className="md:flex gap-1 space-y-1 md:space-y-0 border border-slate-300">
-                                    <div className="flex justify-between items-center">
-                                        {/* You can open the modal using document.getElementById('ID').showModal() method */}
-                                        <button className="btn btn-sm btn-outline" onClick={()=>document.getElementById('my_modal_4').showModal()}>
+                                    <Link to={`/updated/page/${list._id}`}>
+                                        <button className="btn btn-sm btn-outline">
                                             <AiOutlineEdit />
                                         </button>
-
-                                        <dialog id="my_modal_4" className="modal">
-                                            <div className="modal-box w-full max-w-6xl">
-                                                <div>
-                                                    <UpdateTouristSpotPage id={list._id} />
-                                                </div>
-                                                <div className="modal-action flex justify-center items-center">
-                                                    <form method="dialog w-full">
-                                                        {/* if there is a button, it will close the modal */}
-                                                        <button className="btn btn-sm btn-outline text-xl w-full bg-black text-white">X</button>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </dialog>
-                                    </div>
+                                    </Link>
 
                                     <button onClick={() => handleTouristSpotDelete(list._id)} className="btn btn-outline btn-sm text-red-500 text-lg"><MdDeleteForever /></button>
                                 </td>

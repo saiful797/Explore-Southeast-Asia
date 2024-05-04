@@ -1,17 +1,21 @@
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet-async';
-import { useNavigate } from 'react-router-dom';
-import { ToastContainer, toast } from "react-toastify";
+import { useNavigate, useParams } from 'react-router-dom';
+import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import ScrollToTop from '../scrollToTop/ScrollToTop';
 import { useEffect, useState } from 'react';
+import Swal from 'sweetalert2';
 
-const UpdateTouristSpotPage = ({id}) => {
+const UpdateTouristSpotPage = () => {
 
     const navigate = useNavigate();
+    const  id= useParams();
+    // console.log('From Updated Page: ',id);
+
     const [specificSpot, setSpecificSpot] = useState([]);
     useEffect(() => {
-        fetch(`https://explore-southeast-aisa-server.vercel.app/singleSpot/${id}`)
+        fetch(`https://explore-southeast-aisa-server.vercel.app/singleSpot/${id.id}`)
         .then(res => res.json())
         .then(data => {
             setSpecificSpot(data);
@@ -37,7 +41,7 @@ const UpdateTouristSpotPage = ({id}) => {
         const data ={spot, location, country, seasonality, time, cost, visitors, photo,description}
 
 
-        fetch(`https://explore-southeast-aisa-server.vercel.app/updateSpot/${id}`,{
+        fetch(`https://explore-southeast-aisa-server.vercel.app/updateSpot/${id.id}`,{
             method: 'PUT',
             headers:{
                 'content-type': 'application/json'
@@ -47,18 +51,14 @@ const UpdateTouristSpotPage = ({id}) => {
           .then(res => res.json())
           .then(data => {
             if(data.modifiedCount > 0){
-
-                toast.success("Tourist Spot Updated Successfully!", {
-                    position: "top-right",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined
-                });
-
-                navigate(location?.pathname || '/myList')
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Tourist Spot Updated Successfully!',
+                    icon: 'success',
+                    confirmButtonText: 'OK',
+                })
+            
+                navigate('/myList')
             }
           })
     }

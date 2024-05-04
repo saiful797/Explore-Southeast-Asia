@@ -12,6 +12,7 @@ import AddCountry from "../pages/AddCountry";
 import ViewSpotDetailsPage from "../pages/ViewSpotDetailsPage";
 import ProtectedRoute from "../protectedRoute/ProtectedRoute";
 import SpecificCountry from "../pages/SpecificCountry";
+import UpdateTouristSpotPage from "../components/UpdateTouristSpotModal/UpdateTouristSpotPage";
 
 const router = createBrowserRouter([
     {
@@ -78,6 +79,10 @@ const router = createBrowserRouter([
             {
                 path:'/specificCountry/:country',
                 element: <SpecificCountry />
+            },
+            {
+                path:`/updated/page/:id`,
+                element:<UpdateTouristSpotPage />
             }
         ]
     }
