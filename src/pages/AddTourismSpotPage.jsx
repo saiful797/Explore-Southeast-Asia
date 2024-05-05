@@ -13,9 +13,14 @@ const AddTourismSpotPage = () => {
 
     const onSubmit = (touristSpotData) => {
         const userEmail = user.email;
-        const newTouristSpotData = {...touristSpotData, userEmail};
+        // console.log('testing 1 :- ',touristSpotData.cost);
+        
+        touristSpotData.cost = parseInt(touristSpotData.cost)+1000;
+        // console.log('testing 2:- ',touristSpotData.cost);
 
+        const newTouristSpotData = {...touristSpotData, userEmail};
         // console.log(newTouristSpotData);
+        
         fetch('https://explore-southeast-aisa-server.vercel.app/touristSpot', {
             method: 'POST',
             headers: {

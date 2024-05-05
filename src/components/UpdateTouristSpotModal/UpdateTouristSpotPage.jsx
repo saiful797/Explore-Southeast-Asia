@@ -33,7 +33,7 @@ const UpdateTouristSpotPage = () => {
         const country = form.country.value;
         const seasonality = form.seasonality.value;
         const time = form.time.value;
-        const cost = form.cost.value;
+        const cost = parseInt(form.cost.value) + 1000;
         const visitors = form.visitors.value;
         const photo = form.photo.value;
         const description = form.description.value;

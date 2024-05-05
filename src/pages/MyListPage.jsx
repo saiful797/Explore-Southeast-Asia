@@ -79,7 +79,7 @@ const MyListPage = () => {
                                 <td className="border border-slate-300">{index+1}</td>
                                 <td className="border border-slate-300">{list.spot}</td>
                                 <td className="border border-slate-300">{list.country}</td>
-                                <td className="border border-slate-300">${list.cost}</td>
+                                <td className="border border-slate-300">${parseInt(list.cost)-1000}</td>
                                 <td className="md:flex gap-1 space-y-1 md:space-y-0 border border-slate-300">
                                     <Link to={`/updated/page/${list._id}`}>
                                         <button className="btn btn-sm btn-outline">

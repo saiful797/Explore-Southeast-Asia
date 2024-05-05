@@ -10,7 +10,7 @@ const AllTouristSpotCard = ({touristSpot}) => {
             <div className="card-body flex flex-col">
                 <div className='text-xl h-40 space-y-3'>
                     <h3>Spot Name: <span className='font-bold'>{spot}</span></h3>
-                    <h5>Average Cost: <span className='font-bold'>${cost}</span></h5>
+                    <h5>Average Cost: <span className='font-bold'>${parseInt(cost)-1000}</span></h5>
                     <p>travel time: <span className='font-bold'>{time}</span></p>
                     <p>Seasonality: <span className='font-bold'>{seasonality}</span></p>
                 </div>
