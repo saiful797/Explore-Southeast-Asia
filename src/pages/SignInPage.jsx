@@ -69,7 +69,7 @@ const SignInPage = () => {
                             </label>
                             <input type={showPassword? "text":"password"} placeholder="Password..." name="password" className="input input-bordered" {...register("password")} required />
 
-                            <span className="top-[54px] right-5  absolute" onClick={()=>setShowPassword(!showPassword)}>
+                            <span className="top-[60px] right-5  absolute" onClick={()=>setShowPassword(!showPassword)}>
                                 {
                                     showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
                                 }
